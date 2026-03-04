@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Portable Power Stations 2026: Tested and Compared</title>
+    <title>Best Portable Power Stations 2026: Tested and Compared | SmartPowerPick</title>
     <meta name="description" content="I've tested 14 portable power stations over 2 years. Here's what's actually worth your money in 2026 — from camping to home backup to hurricane prep.">
+
+    <!-- FAVICON — молния в кружке -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMxYTFhMWEiIHN0cm9rZT0iI2U2N2UyMiIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTE4IDRMMTAgMThIMTVMMTMgMjhMMjIgMTNIMTdMMTggNFoiIGZpbGw9IiNlNjdlMjIiLz48L3N2Zz4=">
+
     <style>
         * {
             margin: 0;
@@ -19,6 +23,192 @@
             background: #fafaf8;
         }
 
+        /* ======================== */
+        /* HEADER                   */
+        /* ======================== */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #1a1a1a;
+            border-bottom: 3px solid #e67e22;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .logo-text {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .logo-smart {
+            color: #ffffff;
+        }
+
+        .logo-bolt {
+            color: #e74c3c;
+            font-size: 22px;
+            margin: 0 1px;
+        }
+
+        .logo-pick {
+            color: #e67e22;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            list-style: none;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu > li > a {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 14px;
+            color: #ccc;
+            text-decoration: none;
+            padding: 18px 14px;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .nav-menu > li > a:hover {
+            color: #e67e22;
+        }
+
+        /* Dropdown */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #2a2a2a;
+            min-width: 200px;
+            border-radius: 0 0 8px 8px;
+            border-top: 2px solid #e67e22;
+            list-style: none;
+            padding: 8px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu > li:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 13px;
+            color: #bbb;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background: #333;
+            color: #e67e22;
+        }
+
+        /* Search */
+        .search-toggle {
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.2s;
+        }
+
+        .search-toggle:hover {
+            color: #e67e22;
+        }
+
+        .search-bar {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #2a2a2a;
+            padding: 15px 20px;
+            border-bottom: 2px solid #e67e22;
+        }
+
+        .search-bar.active {
+            display: block;
+        }
+
+        .search-bar input {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+            padding: 12px 20px;
+            border: 2px solid #444;
+            border-radius: 25px;
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            outline: none;
+        }
+
+        .search-bar input:focus {
+            border-color: #e67e22;
+        }
+
+        .search-bar input::placeholder {
+            color: #666;
+        }
+
+        /* Mobile burger */
+        .burger {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* ======================== */
+        /* ARTICLE                  */
+        /* ======================== */
+
         .article-container {
             max-width: 740px;
             margin: 0 auto;
@@ -28,6 +218,22 @@
         /* Header */
         .article-header {
             margin-bottom: 50px;
+        }
+
+        .breadcrumb {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #e67e22;
         }
 
         .article-category {
@@ -64,6 +270,32 @@
 
         .article-meta span {
             margin-right: 20px;
+        }
+
+        /* Product Photo Placeholder */
+        .product-photo {
+            width: 100%;
+            height: 400px;
+            background: #f0f0ec;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+            border: 2px dashed #ddd;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .product-photo .photo-icon {
+            font-size: 48px;
+            color: #ccc;
+        }
+
+        .product-photo .photo-label {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 14px;
+            color: #999;
         }
 
         /* Quick Answer Box */
@@ -361,6 +593,7 @@
             padding: 20px 25px;
             margin: 30px 0;
             font-size: 17px;
+            line-height: 2;
         }
 
         /* Section divider */
@@ -423,253 +656,300 @@
             color: #1a1a1a;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            h1 { font-size: 30px; }
-            .article-body h2 { font-size: 26px; }
-            .article-body p { font-size: 17px; }
-            .pros-cons { grid-template-columns: 1fr; }
-            .author-box { flex-direction: column; text-align: center; }
-            .comparison-table { font-size: 12px; }
-            .comparison-table th, 
-            .comparison-table td { padding: 8px 5px; }
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+            z-index: 999;
+        }
+
+        .back-to-top:hover {
+            background: #d35400;
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
+
+        /* ======================== */
+        /* FOOTER                   */
+        /* ======================== */
+
+        .site-footer {
+            background: #1a1a1a;
+            color: #888;
+            padding: 50px 20px 30px;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-about .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .footer-about .footer-logo svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-about .footer-logo span {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .footer-column h4 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #e67e22;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 14px;
+            color: #888;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: #e67e22;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 13px;
+        }
+
+        .footer-bottom a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: #e67e22;
+        }
+
+        /* ======================== */
+        /* RESPONSIVE               */
+        /* ======================== */
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #1a1a1a;
+                flex-direction: column;
+                padding: 20px;
+                border-top: 1px solid #333;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu > li > a {
+                padding: 12px 0;
+                border-bottom: 1px solid #333;
+            }
+
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                border-radius: 0;
+                border-top: none;
+                padding-left: 20px;
+            }
+
+            .nav-menu > li:hover .dropdown-menu {
+                display: block;
+            }
+
+            .burger {
+                display: block;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .article-body h2 {
+                font-size: 26px;
+            }
+
+            .article-body p {
+                font-size: 17px;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .comparison-table {
+                font-size: 12px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 5px;
+            }
+
+            .product-photo {
+                height: 250px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-<article class="article-container">
+<!-- ======================== -->
+<!-- HEADER                   -->
+<!-- ======================== -->
 
-    <!-- HEADER -->
-    <header class="article-header">
-        <div class="article-category">Power Stations</div>
-        <h1>Best Portable Power Stations 2026: Tested and Compared</h1>
-        <p class="article-subtitle">I've tested 14 power stations over the past two years. Here's what's worth your money heading into 2026.</p>
-        <div class="article-meta">
-            <span>By <strong>Mike</strong></span>
-            <span>Updated January 2026</span>
-            <span>18 min read</span>
+<header class="site-header">
+    <div class="header-inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <svg class="logo-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="18" r="16" fill="#1a1a1a" stroke="#e67e22" stroke-width="2"/>
+                <path d="M20 5L11 20H17L15 31L25 15H19L20 5Z" fill="#e74c3c"/>
+            </svg>
+            <span class="logo-text">
+                <span class="logo-smart">Smart</span><span class="logo-bolt">⚡</span><span class="logo-pick">Pick</span>
+            </span>
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-menu" id="navMenu">
+                <li>
+                    <a href="#">Reviews</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">EcoFlow</a></li>
+                        <li><a href="#">Jackery</a></li>
+                        <li><a href="#">Bluetti</a></li>
+                        <li><a href="#">Anker</a></li>
+                        <li><a href="#">Goal Zero</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Compare</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">EcoFlow vs Jackery</a></li>
+                        <li><a href="#">Bluetti vs EcoFlow</a></li>
+                        <li><a href="#">Budget Showdown</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Best For...</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Camping</a></li>
+                        <li><a href="#">Home Backup</a></li>
+                        <li><a href="#">Remote Work</a></li>
+                        <li><a href="#">CPAP</a></li>
+                        <li><a href="#">Hurricane Prep</a></li>
+                        <li><a href="#">Budget Picks</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Deals</a></li>
+            </ul>
+        </nav>
+
+        <div style="display:flex;align-items:center;gap:5px;">
+            <!-- Search -->
+            <button class="search-toggle" id="searchToggle" aria-label="Search">🔍</button>
+            <!-- Burger -->
+            <button class="burger" id="burgerBtn" aria-label="Menu">☰</button>
         </div>
-    </header>
 
-    <!-- QUICK ANSWER -->
-    <div class="quick-answer">
-        <h2>⚡ Short on Time? Here's the Quick Answer</h2>
-        <p class="subtitle">No time for my camping stories? I get it. Here's the cheat sheet.</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Pick</th>
-                    <th>Model</th>
-                    <th>Price</th>
-                    <th>Best For</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="pick-label">🏆 Best Overall</span></td>
-                    <td>EcoFlow Delta 2</td>
-                    <td>$999</td>
-                    <td>Remote work, camping, home backup</td>
-                </tr>
-                <tr>
-                    <td><span class="pick-label">💰 Best Budget</span></td>
-                    <td>Jackery Explorer 300</td>
-                    <td>$289</td>
-                    <td>Phone charging, light camping, CPAP</td>
-                </tr>
-                <tr>
-                    <td><span class="pick-label">⚡ Best Mid-Range</span></td>
-                    <td>Jackery Explorer 1000</td>
-                    <td>$999</td>
-                    <td>Weekend camping, simple reliability</td>
-                </tr>
-                <tr>
-                    <td><span class="pick-label">🔋 Best Heavy-Duty</span></td>
-                    <td>Bluetti AC200P</td>
-                    <td>$1,399</td>
-                    <td>Hurricane prep, off-grid, whole-home backup</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="still-here">Still here? Good. Pull up a chair.</p>
     </div>
 
-    <!-- INTRO -->
-    <div class="article-body">
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <input type="text" placeholder="Search power stations... (e.g. 'Jackery 1000' or 'camping')">
+    </div>
+</header>
 
-        <p>I didn't plan on becoming "the power station guy."</p>
+<!-- ======================== -->
+<!-- ARTICLE                  -->
+<!-- ======================== -->
 
-        <p>It started two years ago. We lost power for 19 hours during a winter storm. No heat, no Wi-Fi, no coffee. Sarah wrapped herself in three blankets and gave me the look. You know the look. The one that says "fix this or I'm going to my mother's."</p>
+<article class="article-container">
 
-        <p>I ordered an EcoFlow Delta 2 that night. From my phone. Under the blankets. With 11% battery left.</p>
-
-        <p>That was the beginning.</p>
-
-        <p>Two years later, I've tested 14 different portable power stations. Some I bought. Some I returned. One I dropped in a parking lot — we'll get to that.</p>
-
-        <p>My garage looks like a battery showroom. Sarah calls it "Mike's expensive hobby." Rex — our lab — sleeps next to whichever unit is charging. I think he likes the warmth.</p>
-
-        <p>This isn't a list I copied from spec sheets. I've used every single one of these. Camping in Durango. Working from the van near Moab. Surviving two more power outages — because apparently Colorado's grid runs on hope and prayers.</p>
-
-        <p>Here's what I learned.</p>
-
-        <!-- ===================== -->
-        <!-- ECOFLOW DELTA 2       -->
-        <!-- ===================== -->
-
-        <h2>🏆 EcoFlow Delta 2 — Best Overall</h2>
-
-        <h3>How I Actually Use It</h3>
-
-        <p>I'm writing this from my van right now. Parked outside a coffee shop in Fort Collins, but I'm not going inside. Their Wi-Fi is terrible and the coffee is $7.</p>
-
-        <p>My setup: MacBook Pro, portable monitor, hotspot, phone charging. All running off the Delta 2. It's 10:14 AM. Battery shows 81%. I started working at 7.</p>
-
-        <p>I'll be fine until 4 PM. I know this because I've done it probably 40 times now.</p>
-
-        <p>That's the thing about the Delta 2. It's boring. In the best way. You plug stuff in. It works. You forget about it.</p>
-
-        <p>Until you need it to do something crazy.</p>
-
-        <h3>The Thanksgiving Test</h3>
-
-        <p>Last November. Power went out at 2 PM. Turkey in the oven. Twelve people coming at 5.</p>
-
-        <p>Sarah didn't give me the look this time. She just pointed at the garage.</p>
-
-        <p>I plugged the oven into the Delta 2.</p>
-
-        <p>Now — let me be honest. I wasn't sure this would work. An oven pulls a lot of watts. The Delta 2 is rated for 1800W, and our oven pulls about 1650W on bake.</p>
-
-        <p>It worked.</p>
-
-        <p>For about 45 minutes. Got us to maybe 80% done on the turkey. Then the battery hit 15% and I switched to just running the lights and the fridge.</p>
-
-        <p>Power came back at 4:20 PM. Turkey was done by 5. Nobody knew we almost had a Thanksgiving disaster.</p>
-
-        <p>Except Sarah. Sarah knows everything.</p>
-
-        <h3>The Numbers</h3>
-
-        <table class="spec-table">
-            <tr>
-                <td class="label">Capacity</td>
-                <td>1,024Wh</td>
-            </tr>
-            <tr>
-                <td class="label">Output</td>
-                <td>1,800W (surge 2,700W)</td>
-            </tr>
-            <tr>
-                <td class="label">Battery Type</td>
-                <td>LiFePO4</td>
-            </tr>
-            <tr>
-                <td class="label">Weight</td>
-                <td>27 lbs</td>
-            </tr>
-            <tr>
-                <td class="label">AC Charging</td>
-                <td>0-80% in 50 minutes</td>
-            </tr>
-            <tr>
-                <td class="label">Solar Input</td>
-                <td>500W max</td>
-            </tr>
-            <tr>
-                <td class="label">Lifespan</td>
-                <td>3,000+ cycles</td>
-            </tr>
-            <tr>
-                <td class="label">Price</td>
-                <td>~$999</td>
-            </tr>
-        </table>
-
-        <p>That charging speed. Read it again.</p>
-
-        <p><strong>0 to 80% in 50 minutes.</strong></p>
-
-        <p>This is where the Delta 2 destroys the competition. My Jackery 1000 takes about 5.5 hours to do the same thing. I've literally gone grocery shopping and come back to a Jackery still charging.</p>
-
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>What I Love</h4>
-                <ul>
-                    <li>Charging speed — 50 minutes to 80%</li>
-                    <li>X-Boost handles devices up to 2200W</li>
-                    <li>Clear display with real-time watts in/out</li>
-                    <li>LiFePO4 — 3,000 cycle lifespan</li>
-                </ul>
-            </div>
-            <div class="cons">
-                <h4>What I Don't Love</h4>
-                <ul>
-                    <li>27 lbs — not fun uphill</li>
-                    <li>App works about 85% of the time</li>
-                    <li>Fan kicks in above 600W — noticeable</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3>Carl's Take</h3>
-
-        <p>Remember Carl? Retired electrician, campsite neighbor in Durango? He bought a Delta 2 three weeks after our conversation. Texted me about it.</p>
-
-        <p>"Thing charges faster than my phone."</p>
-
-        <p>Then, two days later:</p>
-
-        <p>"The app sucks."</p>
-
-        <p>Yeah, Carl. I know.</p>
-
-        <div class="who-box">
-            <h4>Who Should Buy the EcoFlow Delta 2</h4>
-            <div class="who-yes">
-                <ul>
-                    <li>You work remotely and need reliable all-day power</li>
-                    <li>You camp regularly and value fast solar charging</li>
-                    <li>You want home backup for outages (fridge + lights + phones)</li>
-                    <li>You don't mind spending $1,000 for peace of mind</li>
-                </ul>
-            </div>
-            <h4>Who Should Skip It</h4>
-            <div class="who-no">
-                <ul>
-                    <li>You just need phone charging — get a Jackery 300</li>
-                    <li>You want to power your entire house — go bigger</li>
-                    <li>You're a backpacker — 27 lbs is not backpack-friendly (I tried once, my back filed a complaint)</li>
-                </ul>
-            </div>
-        </div>
-
-        <p>If I could only keep ONE power station from my collection, it's this one. It's not the cheapest. Not the lightest. Not the most powerful. But it does everything well.</p>
-
-        <div class="rating-box">
-            <div class="rating-score">9/10</div>
-            <div class="rating-label">Mike's Rating</div>
-            <div class="rating-note">One point off for the app. And the weight. That's two things. Math was never my strong suit.</div>
-        </div>
-
-        <div class="section-divider">• • •</div>
-
-        <!-- ===================== -->
-        <!-- JACKERY 1000           -->
-        <!-- ===================== -->
-
-        <h2>⚡ Jackery Explorer 1000 — The Reliable Workhorse</h2>
-
-        <h3>The One That Started It All</h3>
-
-        <p>Funny thing. The Jackery 1000 was actually my first power station. Before the Delta 2. Before the obsession. Before Sarah started calling the garage "the battery museum."</p>
-
-        <p>I bought it in 2022. No drama. No power outage. Just saw it at Costco, thought "that could be useful," and tossed it in the cart next to paper towels and a 48-pack of granola bars.</p>
-
-        <p>You know how Costco works.</p>
-
-        <h3>First Year — Honest Take</h3>
+    <!-- Breadcrumb -->
+    <header class="article-header">
+        <div class="breadcrumb">
+            <a href="/">Home</a> › <a href="#">Reviews</a> › Best Power Stations  — Honest Take</h3>
 
         <p>For about eight months, it mostly sat in the garage. I'd charge it every couple of months just because the manual said I should. Rex sniffed it once. Lost interest.</p>
 
@@ -686,38 +966,14 @@
         <h3>The Numbers</h3>
 
         <table class="spec-table">
-            <tr>
-                <td class="label">Capacity</td>
-                <td>1,002Wh</td>
-            </tr>
-            <tr>
-                <td class="label">Output</td>
-                <td>1,000W (surge 2,000W)</td>
-            </tr>
-            <tr>
-                <td class="label">Battery Type</td>
-                <td>Li-ion</td>
-            </tr>
-            <tr>
-                <td class="label">Weight</td>
-                <td>22 lbs</td>
-            </tr>
-            <tr>
-                <td class="label">AC Charging</td>
-                <td>~5.5 hours</td>
-            </tr>
-            <tr>
-                <td class="label">Solar Input</td>
-                <td>200W max</td>
-            </tr>
-            <tr>
-                <td class="label">Lifespan</td>
-                <td>500+ cycles</td>
-            </tr>
-            <tr>
-                <td class="label">Price</td>
-                <td>~$999</td>
-            </tr>
+            <tr><td class="label">Capacity</td><td>1,002Wh</td></tr>
+            <tr><td class="label">Output</td><td>1,000W (surge 2,000W)</td></tr>
+            <tr><td class="label">Battery Type</td><td>Li-ion</td></tr>
+            <tr><td class="label">Weight</td><td>22 lbs</td></tr>
+            <tr><td class="label">AC Charging</td><td>~5.5 hours</td></tr>
+            <tr><td class="label">Solar Input</td><td>200W max</td></tr>
+            <tr><td class="label">Lifespan</td><td>500+ cycles</td></tr>
+            <tr><td class="label">Price</td><td>~$999</td></tr>
         </table>
 
         <p>Five and a half hours charging. After using the Delta 2, going back to the Jackery feels like switching from broadband to dial-up. Remember dial-up? That sound? I'm dating myself.</p>
@@ -725,8 +981,6 @@
         <h3>What Numbers Don't Tell You</h3>
 
         <p>The Jackery is simple. Two buttons. One screen. No app. No Bluetooth. No firmware updates. No notifications telling me to optimize my charging schedule.</p>
-
-        <p>I didn't realize how much I valued that until I started testing fancier units with apps that crash and Bluetooth that disconnects and update prompts at midnight.</p>
 
         <p>My dad is 67. He's not updating firmware. He's not troubleshooting Bluetooth. He wants to press a button and plug in his reading lamp when the power goes out.</p>
 
@@ -748,9 +1002,9 @@
                 <h4>What I Don't Like</h4>
                 <ul>
                     <li>5.5 hours AC charging — painfully slow in 2026</li>
-                    <li>Li-ion battery — only 500 cycles vs 3,000 for LiFePO4</li>
+                    <li>Li-ion battery — only 500 cycles vs 3,000</li>
                     <li>No expandable battery option</li>
-                    <li>200W solar max — full sun charge takes all day</li>
+                    <li>200W solar max — takes all day</li>
                 </ul>
             </div>
         </div>
@@ -803,6 +1057,11 @@
 
         <h2>🔋 Bluetti AC200P — The Monster in the Corner</h2>
 
+        <div class="product-photo">
+            <div class="photo-icon">📷</div>
+            <div class="photo-label">Bluetti AC200P — yes, Rex is sleeping next to it — photo coming soon</div>
+        </div>
+
         <p>I need to be upfront about something. The AC200P is the power station I use the least.</p>
 
         <p>It's been in my garage since March. I've fully charged it maybe six times. Tested it on a few things around the house. Ran the fridge for a day just to see if I could.</p>
@@ -825,7 +1084,7 @@
 
         <p>"Day one. Fine. Day two. Fridge stuff started going bad. Day three. Threw out everything. Day four. Found a gas station with a generator. Waited two hours in line for gas. Day five. Same. Day six. Power came back."</p>
 
-        <p>That's Tom's version. What he doesn't say — his wife Maria told me later — is that their daughter cried on day three because her fish died. The tank pump stopped.</p>
+        <p>What he doesn't say — his wife Maria told me later — is that their daughter cried on day three because her fish died. The tank pump stopped.</p>
 
         <p>After Ian, Tom bought an AC200P. No research. No comparison shopping. He called me, said "what's the biggest one," I said Bluetti AC200P, he ordered it that afternoon.</p>
 
@@ -846,51 +1105,25 @@
         <h3>The Numbers</h3>
 
         <table class="spec-table">
-            <tr>
-                <td class="label">Capacity</td>
-                <td>2,000Wh</td>
-            </tr>
-            <tr>
-                <td class="label">Output</td>
-                <td>2,000W (surge 4,800W)</td>
-            </tr>
-            <tr>
-                <td class="label">Battery Type</td>
-                <td>LiFePO4</td>
-            </tr>
-            <tr>
-                <td class="label">Weight</td>
-                <td>60.5 lbs</td>
-            </tr>
-            <tr>
-                <td class="label">AC Charging</td>
-                <td>~4 hours</td>
-            </tr>
-            <tr>
-                <td class="label">Solar Input</td>
-                <td>700W max</td>
-            </tr>
-            <tr>
-                <td class="label">Lifespan</td>
-                <td>3,500+ cycles</td>
-            </tr>
-            <tr>
-                <td class="label">Price</td>
-                <td>~$1,399</td>
-            </tr>
+            <tr><td class="label">Capacity</td><td>2,000Wh</td></tr>
+            <tr><td class="label">Output</td><td>2,000W (surge 4,800W)</td></tr>
+            <tr><td class="label">Battery Type</td><td>LiFePO4</td></tr>
+            <tr><td class="label">Weight</td><td>60.5 lbs</td></tr>
+            <tr><td class="label">AC Charging</td><td>~4 hours</td></tr>
+            <tr><td class="label">Solar Input</td><td>700W max</td></tr>
+            <tr><td class="label">Lifespan</td><td>3,500+ cycles</td></tr>
+            <tr><td class="label">Price</td><td>~$1,399</td></tr>
         </table>
 
         <p>Two thousand watt-hours. That's roughly double the Delta 2. Double the weight too. And $400 more. The question isn't whether it's powerful. It is. The question is whether YOU need that much power.</p>
 
         <h3>My Garage Test</h3>
 
-        <p>I did test it myself. I'm not going to just take Tom's word for everything. He's an accountant. They round things.</p>
-
         <p><strong>Fridge test:</strong> Ran our full-size kitchen fridge for 18 hours. Tom got 21 but Florida fridges work harder in the heat. Makes sense.</p>
 
         <p><strong>Everything test:</strong> Plugged in the fridge, a lamp, the Wi-Fi router, and charged two phones simultaneously. Used about 8% per hour. Math says that's roughly 12 hours of "the power is out but you'd barely notice" living.</p>
 
-        <p><strong>The microwave:</strong> Yep. It runs a microwave. 1100W microwave, no problem. Heated up leftover pasta at 11 PM just because I could. Sarah came downstairs.</p>
+        <p><strong>The microwave:</strong> Yep. It runs a microwave. 1100W, no problem. Heated up leftover pasta at 11 PM just because I could. Sarah came downstairs.</p>
 
         <p>"Why are you microwaving pasta with the power on?"</p>
 
@@ -904,8 +1137,8 @@
                 <ul>
                     <li>Sheer capacity — 2,000Wh runs a home for hours</li>
                     <li>LiFePO4 — 3,500 cycles, will outlive Tom</li>
-                    <li>700W solar input — 5-6 hours full charge in sun</li>
-                    <li>Runs a microwave, fridge, fans simultaneously</li>
+                    <li>700W solar input — 5-6 hours full charge</li>
+                    <li>Runs microwave, fridge, fans simultaneously</li>
                 </ul>
             </div>
             <div class="cons">
@@ -914,7 +1147,7 @@
                     <li>60 lbs — this is furniture, not portable</li>
                     <li>$1,399 — serious money</li>
                     <li>Overkill for camping and daily use</li>
-                    <li>No wheels — at 60 lbs it really should have wheels</li>
+                    <li>No wheels — at 60 lbs it should have wheels</li>
                 </ul>
             </div>
         </div>
@@ -923,7 +1156,7 @@
             <h4>Who Should Buy the Bluetti AC200P</h4>
             <div class="who-yes">
                 <ul>
-                    <li>You live in hurricane/storm territory (Florida, Texas, Louisiana, Carolina coast)</li>
+                    <li>You live in hurricane/storm territory (Florida, Texas, Louisiana)</li>
                     <li>You need to keep a fridge running during long outages</li>
                     <li>You have a permanent spot for it (garage, closet, dining room)</li>
                     <li>You think of it as home insurance, not a gadget</li>
@@ -934,7 +1167,7 @@
                 <ul>
                     <li>You want to take it camping — your back will file a complaint</li>
                     <li>You just need phone and laptop charging — absurd overkill</li>
-                    <li>You're on a budget — $1,399 plus solar panels is a real investment</li>
+                    <li>You're on a budget — $1,399 plus panels is a real investment</li>
                 </ul>
             </div>
         </div>
@@ -953,6 +1186,11 @@
 
         <h2>💰 Jackery Explorer 300 — Small, Cheap, Surprisingly Useful</h2>
 
+        <div class="product-photo">
+            <div class="photo-icon">📷</div>
+            <div class="photo-label">Jackery 300 next to a coffee mug for scale — photo coming soon</div>
+        </div>
+
         <p>I almost didn't include this one. A 300Wh power station in a list with 1000Wh and 2000Wh monsters feels like bringing a bicycle to a car show.</p>
 
         <p>But then I got an email.</p>
@@ -965,41 +1203,15 @@
 
         <h3>What 300Wh Actually Gets You</h3>
 
-        <p>Real numbers. Not theoretical. I tested these at home with a Kill-a-Watt meter because I'm that guy now.</p>
-
         <table class="spec-table">
-            <tr>
-                <td class="label">iPhone 15</td>
-                <td>20+ full charges</td>
-            </tr>
-            <tr>
-                <td class="label">MacBook Air</td>
-                <td>4 full charges</td>
-            </tr>
-            <tr>
-                <td class="label">CPAP (no heater)</td>
-                <td>3-4 nights</td>
-            </tr>
-            <tr>
-                <td class="label">Fish tank pump (10W)</td>
-                <td>25+ hours</td>
-            </tr>
-            <tr>
-                <td class="label">LED string lights</td>
-                <td>50+ hours</td>
-            </tr>
-            <tr>
-                <td class="label">Portable fan</td>
-                <td>12-15 hours</td>
-            </tr>
-            <tr>
-                <td class="label">Mini projector</td>
-                <td>3 movies</td>
-            </tr>
-            <tr>
-                <td class="label">DJI Mini drone</td>
-                <td>5 charges</td>
-            </tr>
+            <tr><td class="label">iPhone 15</td><td>20+ full charges</td></tr>
+            <tr><td class="label">MacBook Air</td><td>4 full charges</td></tr>
+            <tr><td class="label">CPAP (no heater)</td><td>3-4 nights</td></tr>
+            <tr><td class="label">Fish tank pump (10W)</td><td>25+ hours</td></tr>
+            <tr><td class="label">LED string lights</td><td>50+ hours</td></tr>
+            <tr><td class="label">Portable fan</td><td>12-15 hours</td></tr>
+            <tr><td class="label">Mini projector</td><td>3 movies</td></tr>
+            <tr><td class="label">DJI Mini drone</td><td>5 charges</td></tr>
         </table>
 
         <p>Twenty-plus phone charges. From something the size of a toaster that weighs 7 pounds. Seven. Pounds. Sarah carries heavier purses.</p>
@@ -1007,45 +1219,22 @@
         <h3>The Numbers</h3>
 
         <table class="spec-table">
-            <tr>
-                <td class="label">Capacity</td>
-                <td>293Wh</td>
-            </tr>
-            <tr>
-                <td class="label">Output</td>
-                <td>300W (surge 500W)</td>
-            </tr>
-            <tr>
-                <td class="label">Battery Type</td>
-                <td>Li-ion</td>
-            </tr>
-            <tr>
-                <td class="label">Weight</td>
-                <td>7.1 lbs</td>
-            </tr>
-            <tr>
-                <td class="label">AC Charging</td>
-                <td>~2 hours</td>
-            </tr>
-            <tr>
-                <td class="label">Solar Input</td>
-                <td>65W max</td>
-            </tr>
-            <tr>
-                <td class="label">Price</td>
-                <td>~$289</td>
-            </tr>
+            <tr><td class="label">Capacity</td><td>293Wh</td></tr>
+            <tr><td class="label">Output</td><td>300W (surge 500W)</td></tr>
+            <tr><td class="label">Battery Type</td><td>Li-ion</td></tr>
+            <tr><td class="label">Weight</td><td>7.1 lbs</td></tr>
+            <tr><td class="label">AC Charging</td><td>~2 hours</td></tr>
+            <tr><td class="label">Solar Input</td><td>65W max</td></tr>
+            <tr><td class="label">Price</td><td>~$289</td></tr>
         </table>
 
         <h3>What It WON'T Do</h3>
-
-        <p>I'm going to save you a return trip to Amazon.</p>
 
         <div class="highlight">
             ❌ Run a fridge — drains in 2-3 hours<br>
             ❌ Power a microwave — 1000W+ vs 300W max<br>
             ❌ Run a space heater — don't even try<br>
-            ❌ Be your whole-home hurricane backup — this is a flashlight, not a lighthouse
+            ❌ Be your whole-home backup — this is a flashlight, not a lighthouse
         </div>
 
         <p>If you need those things, scroll up to the Delta 2 or the Bluetti. Honesty saves everybody's time.</p>
@@ -1054,7 +1243,7 @@
 
         <p><strong>The Diana scenario.</strong> PG&E shuts off power for 36 hours because it's windy. Again. With a Jackery 300: fish alive, phone charged, laptop running for a workday. Sanity mostly preserved.</p>
 
-        <p><strong>CPAP users — this is a big one.</strong> Millions of Americans use CPAP machines for sleep apnea. Every camping trip becomes a math problem. With the Jackery 300 and a CPAP running at 30W without the heated humidifier: two full nights plus leftover for phone charging. That's not luxury. For some people that's "I can go camping again."</p>
+        <p><strong>CPAP users — this is a big one.</strong> Millions of Americans use CPAP machines for sleep apnea. With the Jackery 300 and a CPAP running at 30W without the heated humidifier: two full nights plus leftover for phone charging. That's not luxury. For some people that's "I can go camping again."</p>
 
         <p><strong>Kids' soccer game.</strong> Last month I used it at a soccer tournament. Three parents asked me to charge their phones. I felt like a hero. A very small hero. But still.</p>
 
@@ -1090,7 +1279,7 @@
         <div class="section-divider">• • •</div>
 
         <!-- ===================== -->
-        <!-- FULL COMPARISON        -->
+        <!-- COMPARISON TABLE       -->
         <!-- ===================== -->
 
         <h2>📊 Head-to-Head: All Four Compared</h2>
@@ -1106,170 +1295,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Capacity</td>
-                    <td>1,024Wh</td>
-                    <td>1,002Wh</td>
-                    <td>2,000Wh</td>
-                    <td>293Wh</td>
-                </tr>
-                <tr>
-                    <td>Output</td>
-                    <td>1,800W</td>
-                    <td>1,000W</td>
-                    <td>2,000W</td>
-                    <td>300W</td>
-                </tr>
-                <tr>
-                    <td>Battery</td>
-                    <td>LiFePO4</td>
-                    <td>Li-ion</td>
-                    <td>LiFePO4</td>
-                    <td>Li-ion</td>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>27 lbs</td>
-                    <td>22 lbs</td>
-                    <td>60.5 lbs</td>
-                    <td>7.1 lbs</td>
-                </tr>
-                <tr>
-                    <td>AC Charge</td>
-                    <td>50 min to 80%</td>
-                    <td>5.5 hours</td>
-                    <td>4 hours</td>
-                    <td>2 hours</td>
-                </tr>
-                <tr>
-                    <td>Solar Max</td>
-                    <td>500W</td>
-                    <td>200W</td>
-                    <td>700W</td>
-                    <td>65W</td>
-                </tr>
-                <tr>
-                    <td>Lifespan</td>
-                    <td>3,000+</td>
-                    <td>500+</td>
-                    <td>3,500+</td>
-                    <td>500+</td>
-                </tr>
-                <tr>
-                    <td>Price</td>
-                    <td>$999</td>
-                    <td>$999</td>
-                    <td>$1,399</td>
-                    <td>$289</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="section-divider">• • •</div>
-
-        <!-- ===================== -->
-        <!-- FIND YOUR SCENARIO     -->
-        <!-- ===================== -->
-
-        <h2>🎯 Which One Should YOU Buy?</h2>
-
-        <p>I've been doing this long enough to know that nobody cares about watt-hours until they need them. So forget the specs for a minute. Find yourself below.</p>
-
-        <div class="scenario">
-            <h4>"I just don't want my phone to die"</h4>
-            <p>Beach. Festival. Camping once a year. You just want your phone charged and maybe a speaker.</p>
-            <p class="recommendation">→ Jackery 300. $289. Done. Don't overthink it.</p>
-        </div>
-
-        <div class="scenario">
-            <h4>"I camp most weekends with my family"</h4>
-            <p>Coffee maker. Fan in the tent. Phones, tablets, lights, mini fridge.</p>
-            <p class="recommendation">→ Jackery 1000 if you want simple. EcoFlow Delta 2 if you want fast charging. Same price. Different personalities.</p>
-        </div>
-
-        <div class="scenario">
-            <h4>"I work from my laptop and can't lose power"</h4>
-            <p>Zoom calls. Deadlines. Clients who don't care that your power is out.</p>
-            <p class="recommendation">→ EcoFlow Delta 2. No contest. I write on mine right now.</p>
-        </div>
-
-        <div class="scenario">
-            <h4>"Hurricane season scares me"</h4>
-            <p>Gulf Coast. Atlantic coast. You remember what six days without power felt like. The fridge. The heat. The darkness.</p>
-            <p class="recommendation">→ Bluetti AC200P. Yes, $1,399. You know what's also expensive? Throwing out $400 of food from your fridge. Twice.</p>
-        </div>
-
-        <div class="scenario">
-            <h4>"I use a CPAP machine"</h4>
-            <p>You want to camp. You want to sleep safely during outages. You need your CPAP every night.</p>
-            <p class="recommendation">→ Weekend trips: Jackery 300 (2 nights). Longer trips: EcoFlow Delta 2 (5-6 nights, add solar for indefinite).</p>
-        </div>
-
-        <div class="scenario">
-            <h4>"I live in an apartment — no gas generator allowed"</h4>
-            <p>No garage. No yard. HOA rules. Carbon monoxide risk indoors. 73 people died from CO poisoning during Texas Winter Storm Uri.</p>
-            <p class="recommendation">→ Any portable power station. Silent. No fumes. Use it in your bedroom. Jackery 300 for basics. Delta 2 if the fridge matters.</p>
-        </div>
-
-        <div class="scenario">
-            <h4>"I run a small business on the go"</h4>
-            <p>Food truck. Farm stand. Market booth. Photography. DJ. A dead battery means lost income.</p>
-            <p class="recommendation">→ EcoFlow Delta 2 for moderate needs. Bluetti AC200P for heavy equipment. Write it off as a business expense.</p>
-        </div>
-
-        <div class="section-divider">• • •</div>
-
-        <!-- ===================== -->
-        <!-- CLOSING                -->
-        <!-- ===================== -->
-
-        <h2>One More Thing</h2>
-
-        <p>A year ago I got an email from a nurse in Houston. She works night shifts. After the 2021 freeze, she bought an EcoFlow Delta 2.</p>
-
-        <p>She didn't use it for a year. Kept it charged in the closet. Her husband joked about their "$1,000 paperweight."</p>
-
-        <p>Then last winter, a storm knocked out power at 6 AM. She'd just gotten home from a 12-hour shift. Her CPAP was dead. The house was getting cold. Her phone was at 8%.</p>
-
-        <p>She plugged everything into the Delta 2. CPAP, phone, a space heater on low. Slept six hours. Woke up to the power still out but her phone charged, her house warm enough, and her husband making coffee with their camping percolator plugged into the Delta 2.</p>
-
-        <p>"Best paperweight we ever bought," he said.</p>
-
-        <p>She told me I could share the story. So I did.</p>
-
-        <h2>Final Word</h2>
-
-        <p>You don't buy a power station because it's exciting. You buy it because the alternative is worse.</p>
-
-        <p>Cold house. Dead phone. Spoiled food. Missed work. Scared kids. Dead fish.</p>
-
-        <p>Pick your scenario. Pick your station. Charge it. Put it in the closet.</p>
-
-        <p>Hope you never need it.</p>
-
-        <p>But when you do — you'll be the person everyone on your street comes to.</p>
-
-        <p>Trust me. I'm that person on my street now. It's not a bad reputation to have.</p>
-
-        <p>— Mike</p>
-
-    </div>
-
-    <!-- AUTHOR BOX -->
-    <div class="author-box">
-        <div class="author-avatar">M</div>
-        <div class="author-info">
-            <h4>Mike</h4>
-            <p>I've been testing portable power stations for over two years from my home base in Colorado. When I'm not comparing batteries, I'm camping with my wife Sarah and our lab Rex, or pretending to work from my van. I buy everything I review with my own money — which Sarah reminds me of regularly.</p>
-        </div>
-    </div>
-
-    <!-- PS BOX -->
-    <div class="ps-box">
-        <strong>P.S.</strong> Got questions? Specific situation I didn't cover? Drop a comment below. I read them all. I answer most. Sarah answers the ones about whether the Bluetti works as a coffee table. (It does. She still won't admit it.)
-    </div>
-
-</article>
-
-</body>
-</html>
+                <tr><td>Capacity</td><td>1,024Wh</td><td>1,002Wh</td><td>2,000Wh</td><td>293Wh</td></tr>
+                <tr><td>Output</td><td>1,800W</td><td>1,000W</td><td>2,000W</td><td>300W</td></tr>
+                <tr><td>Battery</td><td>LiFePO4</td><td>Li-ion</td><td>LiF

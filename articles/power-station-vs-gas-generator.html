@@ -17,7 +17,6 @@ body {
   font-size: 19px;
 }
 
-/* HEADER */
 .site-header {
   background: #1a1a1a;
   padding: 0 20px;
@@ -40,7 +39,6 @@ body {
 .logo .bolt { color: #e74c3c; }
 .logo .pick { color: #e67e22; }
 
-/* NAV */
 .nav-desktop {
   display: flex;
   gap: 24px;
@@ -95,14 +93,12 @@ body {
 }
 .nav-mobile a:hover { color: #e67e22; }
 
-/* ARTICLE LAYOUT */
 .article-container {
   max-width: 720px;
   margin: 0 auto;
   padding: 20px 20px 60px;
 }
 
-/* BREADCRUMB */
 .breadcrumb {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 13px;
@@ -116,7 +112,6 @@ body {
 }
 .breadcrumb a:hover { color: #e67e22; }
 
-/* CATEGORY TAG */
 .category-tag {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 12px;
@@ -127,7 +122,6 @@ body {
   margin-bottom: 12px;
 }
 
-/* HEADINGS */
 h1 {
   font-size: 2.1em;
   line-height: 1.2;
@@ -142,7 +136,6 @@ h1 {
   line-height: 1.5;
 }
 
-/* META */
 .article-meta {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 13px;
@@ -171,7 +164,6 @@ h1 {
   font-size: 13px;
 }
 
-/* IMAGE PLACEHOLDER */
 .featured-image {
   width: 100%;
   height: 300px;
@@ -183,6 +175,7 @@ h1 {
   margin-bottom: 36px;
   position: relative;
   overflow: hidden;
+  border-bottom: 3px solid #e67e22;
 }
 .featured-image::before {
   content: '⚡ vs ⛽';
@@ -190,7 +183,6 @@ h1 {
   opacity: 0.6;
 }
 
-/* QUICK ANSWER */
 .quick-answer {
   background: #f0faf0;
   border-left: 4px solid #27ae60;
@@ -208,7 +200,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* SECTION HEADINGS */
 h2 {
   font-size: 1.5em;
   margin-top: 48px;
@@ -223,12 +214,8 @@ h3 {
   color: #1a1a1a;
 }
 
-/* PARAGRAPHS */
-p {
-  margin-bottom: 18px;
-}
+p { margin-bottom: 18px; }
 
-/* DIVIDER */
 .section-divider {
   text-align: center;
   margin: 40px 0;
@@ -237,7 +224,6 @@ p {
   letter-spacing: 12px;
 }
 
-/* COMPARISON TABLE */
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -254,6 +240,7 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  border-bottom: 3px solid #e67e22;
 }
 .comparison-table td {
   padding: 12px 16px;
@@ -268,15 +255,9 @@ p {
   color: #1a1a1a;
   white-space: nowrap;
 }
-.winner {
-  color: #27ae60;
-  font-weight: 600;
-}
-.loser {
-  color: #999;
-}
+.winner { color: #27ae60; font-weight: 600; }
+.loser { color: #999; }
 
-/* COST BOX */
 .cost-box {
   background: #f8f8f6;
   border: 2px solid #eee;
@@ -306,7 +287,6 @@ p {
   border-top: 2px solid #1a1a1a;
 }
 
-/* SAFETY WARNING */
 .safety-box {
   background: #fef0f0;
   border-left: 4px solid #e74c3c;
@@ -324,19 +304,15 @@ p {
   margin-bottom: 10px;
 }
 
-/* HIGHLIGHT BOX */
 .highlight-box {
   background: #fffef5;
-  border-left: 4px solid #f1c40f;
+  border-left: 4px solid #e67e22;
   padding: 20px 24px;
   margin: 24px 0;
   border-radius: 0 8px 8px 0;
 }
 
-/* WHO SHOULD BUY */
-.who-section {
-  margin: 32px 0;
-}
+.who-section { margin: 32px 0; }
 .who-title {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 700;
@@ -346,7 +322,7 @@ p {
   border-radius: 6px;
 }
 .who-title.buy { background: #f0faf0; color: #27ae60; }
-.who-title.skip { background: #fef0f0; color: #e74c3c; }
+.who-title.gen { background: #fef0f0; color: #e74c3c; }
 .who-title.both { background: #f0f4fa; color: #2c7be5; }
 .who-title.wait { background: #f8f8f6; color: #888; }
 
@@ -365,18 +341,16 @@ p {
   left: 0;
   top: 8px;
 }
-.who-list.buy li::before { content: '✅'; }
-.who-list.skip li::before { content: '✅'; }
-.who-list.both li::before { content: '✅'; }
-.who-list.wait li::before { content: '❌'; }
+.who-list.check li::before { content: '✅'; }
+.who-list.cross li::before { content: '❌'; }
 
-/* VERDICT BOX */
 .verdict-box {
   background: #1a1a1a;
   color: #ffffff;
   padding: 32px;
   border-radius: 12px;
   margin: 40px 0;
+  border-bottom: 3px solid #e67e22;
 }
 .verdict-label {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -391,11 +365,8 @@ p {
   line-height: 1.7;
   color: #e0e0e0;
 }
-.verdict-text strong {
-  color: #ffffff;
-}
+.verdict-text strong { color: #ffffff; }
 
-/* KEEP READING */
 .keep-reading {
   background: #f8f8f6;
   border-radius: 12px;
@@ -422,7 +393,6 @@ p {
 .keep-reading a:last-child { border-bottom: none; }
 .keep-reading a:hover { color: #d35400; }
 
-/* AUTHOR BOX */
 .author-box {
   display: flex;
   gap: 20px;
@@ -457,10 +427,9 @@ p {
   line-height: 1.6;
 }
 
-/* PS BOX */
 .ps-box {
   background: #fffef5;
-  border: 2px dashed #f1c40f;
+  border: 2px dashed #e67e22;
   border-radius: 8px;
   padding: 20px 24px;
   margin: 32px 0;
@@ -468,12 +437,12 @@ p {
 }
 .ps-box a { color: #e67e22; }
 
-/* FOOTER */
 .site-footer {
   background: #1a1a1a;
   color: #999;
   padding: 48px 20px 24px;
   margin-top: 60px;
+  border-top: 3px solid #e67e22;
 }
 .footer-grid {
   max-width: 900px;
@@ -503,12 +472,11 @@ p {
 .footer-bottom {
   text-align: center;
   padding-top: 24px;
-  border-top: 1px solid #333;
+  border-top: 3px solid #e67e22;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 13px;
 }
 
-/* BACK TO TOP */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -531,7 +499,6 @@ p {
 .back-to-top:hover { background: #d35400; }
 .back-to-top.visible { display: flex; }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-desktop { display: none; }
   .burger { display: flex; }
@@ -547,7 +514,6 @@ p {
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <a href="../index.html" class="logo">Smart<span class="bolt">⚡</span><span class="pick">Pick</span></a>
   <nav class="nav-desktop">
@@ -569,25 +535,20 @@ p {
   <a href="#">Deals</a>
 </nav>
 
-<!-- ARTICLE -->
 <main class="article-container">
 
-<!-- Breadcrumb -->
 <div class="breadcrumb">
   <a href="../index.html">Home</a> &rsaquo;
   <a href="#">Guides</a> &rsaquo;
   Power Station vs Generator
 </div>
 
-<!-- Category -->
 <div class="category-tag">Guides</div>
 
-<!-- Title -->
 <h1>Portable Power Station vs Gas Generator: Which One Won't Drive Your Neighbors Crazy?</h1>
 
 <p class="subtitle">I've used both. One of them almost got me uninvited from a campground.</p>
 
-<!-- Meta -->
 <div class="article-meta">
   <div class="meta-author">
     <div class="meta-avatar">M</div>
@@ -597,10 +558,8 @@ p {
   <span>12 min read</span>
 </div>
 
-<!-- Featured Image -->
 <div class="featured-image"></div>
 
-<!-- Quick Answer -->
 <div class="quick-answer">
   <div class="quick-answer-title">⚡ Quick Answer</div>
   <p><strong>If you need to power your house for 3+ days straight</strong> during a major outage — get a generator.</p>
@@ -608,7 +567,6 @@ p {
   <p>Most people reading this should get a power station. Here's why.</p>
 </div>
 
-<!-- INTRO -->
 <p>Let me tell you about the most awkward conversation I've ever had at a campground.</p>
 
 <p>It was 6:14 AM. August. Durango, Colorado. I know the exact time because that's when my neighbor fired up his Honda EU2200i generator to make coffee.</p>
@@ -629,14 +587,12 @@ p {
 
 <div class="section-divider">• • •</div>
 
-<!-- THE REAL DIFFERENCES -->
 <h2>The Real Differences (Not What the Ads Tell You)</h2>
 
 <p>I've spent two years going back and forth between generators and power stations. Borrowed generators from friends. Tested power stations I bought with my own money. Read probably 300 forum posts from people who actually use both.</p>
 
 <p>Here's what actually matters. Not specs. Real life.</p>
 
-<!-- COMPARISON TABLE -->
 <table class="comparison-table">
   <thead>
     <tr>
@@ -701,12 +657,11 @@ p {
       <td class="winner">10+ years (LiFePO4)</td>
       <td class="loser">5–10 years (with maintenance)</td>
     </tr>
-    </tbody>
+  </tbody>
 </table>
 
 <div class="section-divider">• • •</div>
 
-<!-- NOISE -->
 <h2>Noise — The Thing Nobody Warns You About</h2>
 
 <p>I measured this with a $12 app on my phone. Not scientific. But close enough to make the point.</p>
@@ -729,7 +684,6 @@ p {
 
 <div class="section-divider">• • •</div>
 
-<!-- SAFETY -->
 <h2>Safety — This One Is Serious</h2>
 
 <p>I make jokes in these articles. Not in this section.</p>
@@ -761,7 +715,6 @@ p {
 
 <div class="section-divider">• • •</div>
 
-<!-- COST -->
 <h2>Cost — The Math Nobody Does</h2>
 
 <p>Everyone compares the sticker price.</p>
@@ -774,7 +727,7 @@ p {
   <div class="cost-box-title">⛽ Gas Generator (Honda EU2200i) — 10 Year Cost</div>
   <div class="cost-line"><span>Generator</span><span>$1,150</span></div>
   <div class="cost-line"><span>Gas can + first fill</span><span>$25</span></div>
-  <div class="cost-line"><span>Gas per year (occasional use) × 10</span><span>$800–1,500</span></div>
+  <div class="cost-line"><span>Gas per year × 10</span><span>$800–1,500</span></div>
   <div class="cost-line"><span>Oil changes (2×/year) × 10</span><span>$200</span></div>
   <div class="cost-line"><span>Spark plugs (1×/year) × 10</span><span>$80</span></div>
   <div class="cost-line"><span>Total after 10 years</span><span>$2,255–2,955</span></div>
@@ -783,7 +736,7 @@ p {
 <div class="cost-box">
   <div class="cost-box-title">⚡ Power Station (EcoFlow Delta 2) — 10 Year Cost</div>
   <div class="cost-line"><span>Power station</span><span>$799</span></div>
-  <div class="cost-line"><span>Electricity to charge (~$2/month) × 10 years</span><span>$240</span></div>
+  <div class="cost-line"><span>Electricity (~$2/mo) × 10 years</span><span>$240</span></div>
   <div class="cost-line"><span>Maintenance</span><span>$0</span></div>
   <div class="cost-line"><span>Total after 10 years</span><span>$1,039</span></div>
 </div>
@@ -800,7 +753,6 @@ p {
 
 <div class="section-divider">• • •</div>
 
-<!-- CONVENIENCE -->
 <h2>Convenience — The Wife Test</h2>
 
 <p>I have a test for every piece of gear I review. I call it the Wife Test.</p>
@@ -841,122 +793,10 @@ p {
 
 <div class="section-divider">• • •</div>
 
-<!-- WHERE GENERATORS WIN -->
 <h2>Where Generators Still Win (Being Honest Here)</h2>
 
-<p>If I only said nice things about power stations, you shouldn't trust me. So here's where generators genuinely win:</p>
-
-<h3>Raw Power</h3>
-
-<p>A $500 generator can output 3,000–4,000 watts continuously. To get that from a power station, you're spending $2,000+. If you need to run a well pump, central AC, or multiple heavy appliances at once — a generator handles that without blinking.</p>
-
-<h3>Unlimited Runtime</h3>
-
-<p>Generator + gas cans = power for days. Weeks. As long as gas stations are open, you have power.</p>
-
-<p>A power station dies when the battery dies. If it's cloudy and you have no way to recharge, you're counting watts like calories on a diet.</p>
-
-<h3>Extreme Situations</h3>
-
-<p>Hurricane knocks power out for 7 days? Major ice storm? Grid down for a week?</p>
-
-<p>A generator is a workhorse. It doesn't care how long the job takes.</p>
-
-<p>A power station is a sprinter. Fast, clean, quiet — but it runs out.</p>
-
-<p>I'm not going to pretend otherwise.</p>
-
-<p>A guy I know in Cape Coral went through Hurricane Ian. No power for nine days. He had BOTH — a Jackery for the first night (quiet, ran the fan and charged phones) and a generator for days 2 through 9 (fridge, lights, fans, sanity).</p>
-
-<p>Honestly? That's the smartest setup I've heard of.</p>
-
-<div class="section-divider">• • •</div>
-
-<!-- WHO SHOULD BUY WHAT -->
-<h2>So Who Should Buy What?</h2>
-
-<div class="who-section">
-  <div class="who-title buy">⚡ Get a Power Station If:</div>
-  <ul class="who-list buy">
-    <li>You live in an apartment or condo</li>
-    <li>You camp, tailgate, or travel in an RV</li>
-    <li>You need CPAP or medical device backup</li>
-    <li>You work remotely — van, outdoors, anywhere</li>
-    <li>Your outages are short (2–12 hours)</li>
-    <li>You want something anyone in your family can use</li>
-    <li>You have neighbors who like you and you'd like to keep it that way</li>
-    <li>You want zero maintenance</li>
-  </ul>
-</div>
-
-<div class="who-section">
-  <div class="who-title skip">⛽ Get a Generator If:</div>
-  <ul class="who-list skip">
-    <li>You need to power heavy appliances (well pump, central AC, electric stove)</li>
-    <li>Your area gets multi-day outages regularly</li>
-    <li>You have outdoor space (20+ feet from the house)</li>
-    <li>You don't mind maintenance and gas storage</li>
-    <li>You need 4,000+ watts continuously</li>
-  </ul>
-</div>
-
-<div class="who-section">
-  <div class="who-title both">🔋 Get Both If:</div>
-  <ul class="who-list both">
-    <li>You live in hurricane or storm country</li>
-    <li>You want quiet power for night and heavy power for day</li>
-    <li>Your budget allows it</li>
-  </ul>
-</div>
-
-<div class="who-section">
-  <div class="who-title wait">⏳ Skip Both For Now If:</div>
-  <ul class="who-list wait">
-    <li>You rent and move every year — wait until you settle down</li>
-    <li>Your outages are under 30 minutes and you're fine with that</li>
-  </ul>
-</div>
-
-<div class="section-divider">• • •</div>
-
-<!-- VERDICT -->
-<div class="verdict-box">
-  <div class="verdict-label">Mike's Verdict</div>
-  <div class="verdict-text">
-    <p>Two years ago I would have said <em>"it depends."</em> I hate that answer so I'm not giving it.</p>
-    <p><strong>For 8 out of 10 people reading this: get a power station.</strong></p>
-    <p>You'll use it more often. You'll actually grab it when you need it (because it's easy). You won't kill your neighbor's baby's nap. You won't poison your family with CO at 2 AM because you were tired and forgot to open the garage door.</p>
-    <p>If you're in the other 2 out of 10 — you already know. You've got a farmhouse with a well pump, or you're in Florida prepping for hurricane season. Get a generator. Or better yet — get both.</p>
-  </div>
-</div>
-
-<!-- KEEP READING -->
-<div class="keep-reading">
-  <div class="keep-reading-title">📚 Keep Reading</div>
-  <a href="best-portable-power-stations-2025.html">→ Best Portable Power Stations 2026 — My Full Rankings</a>
-  <a href="are-portable-power-stations-worth-it.html">→ Are Portable Power Stations Worth It?</a>
-  <a href="power-station-during-hurricane.html">→ How to Use a Power Station During a Hurricane</a>
-</div>
-
-<!-- AUTHOR BOX -->
-<div class="author-box">
-  <div class="author-avatar">M</div>
-  <div class="author-info">
-    <h3>About Mike</h3>
-    <p>I've been testing portable power stations for over two years from my home base in Colorado. I buy everything with my own money, borrow what I can from friends, and read every owner review I can find. When I'm not testing gear, I'm probably writing about it from my van — or watching Rex sleep next to whatever's warmest.</p>
-  </div>
-</div>
-
-<!-- PS BOX -->
-<div class="ps-box">
-  <strong>P.S.</strong> Got a question about generators vs power stations that I didn't cover? Shoot me an email: <a href="mailto:mike@smartpowerpick.com">mike@smartpowerpick.com</a><br><br>
-  I read everything. Sarah proofreads my replies. Between us, her grammar is better.
-</div>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
+<p>If I only said nice things about power stations, you
+  <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-col">
       <h4>About</h4>
@@ -989,13 +829,11 @@ p {
   </div>
 </footer>
 
-<!-- BACK TO TOP -->
 <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-// Back to top
 window.addEventListener('scroll', function() {
-  const btn = document.querySelector('.back-to-top');
+  var btn = document.querySelector('.back-to-top');
   if (window.scrollY > 400) {
     btn.classList.add('visible');
   } else {
@@ -1003,7 +841,6 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Burger menu
 document.querySelector('.burger').addEventListener('click', function() {
   document.querySelector('.nav-mobile').classList.toggle('active');
 });

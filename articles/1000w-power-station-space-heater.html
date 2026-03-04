@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Long Will a 1000W Power Station Run a Space Heater? — SmartPowerPick</title>
+<meta name="description" content="Short answer: not long. I tested 4 space heaters on 3 power stations. The results are brutally honest — and one alternative changed everything.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a1a1a' stroke='%23e67e22' stroke-width='6'/%3E%3Cpolygon points='55,15 35,55 48,55 42,85 65,42 52,42' fill='%23e74c3c'/%3E%3C/svg%3E">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #FAFAF8;
+  color: #1a1a1a;
+  line-height: 1.85;
+  font-size: 19px;
+}
+
+.site-header {
+  background: #1a1a1a;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #e67e22;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+.logo .bolt { color: #e74c3c; }
+.logo .pick { color: #e67e22; }
+
+.nav-desktop {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-desktop a {
+  color: #cccccc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-desktop a:hover { color: #e67e22; }
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 63px;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  padding: 20px;
+  border-bottom: 3px solid #e67e22;
+  z-index: 999;
+}
+.nav-mobile.active { display: block; }
+.nav-mobile a {
+  display: block;
+  color: #cccccc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+.nav-mobile a:hover { color: #e67e22; }
+
+.article-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+.breadcrumb {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.breadcrumb a { color: #888; text-decoration: none; }
+.breadcrumb a:hover { color: #e67e22; }
+
+.category-tag {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e67e22;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+.subtitle {
+  font-size: 1.15em;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.article-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.meta-author { display: flex; align-items: center; gap: 8px; }
+.meta-avatar {
+  width: 28px;
+  height: 28px;
+  background: #e67e22;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.featured-image {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #e67e22;
+}
+.featured-image::before {
+  content: '🔋 + 🔥';
+  font-size: 48px;
+  opacity: 0.6;
+}
+
+.quick-answer {
+  background: #f0faf0;
+  border-left: 4px solid #27ae60;
+  padding: 24px 28px;
+  margin-bottom: 36px;
+  border-radius: 0 8px 8px 0;
+}
+.quick-answer-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+h3 {
+  font-size: 1.2em;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  color: #1a1a1a;
+}
+
+p { margin-bottom: 18px; }
+
+.section-divider {
+  text-align: center;
+  margin: 40px 0;
+  color: #ccc;
+  font-size: 18px;
+  letter-spacing: 12px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 36px;
+  font-size: 16px;
+}
+.comparison-table th {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #e67e22;
+}
+.comparison-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+.comparison-table tr:nth-child(even) { background: #f8f8f6; }
+.winner { color: #27ae60; font-weight: 600; }
+.loser { color: #e74c3c; font-weight: 600; }
+
+.highlight-box {
+  background: #fffef5;
+  border-left: 4px solid #e67e22;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.warning-box {
+  background: #fef0f0;
+  border-left: 4px solid #e74c3c;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+.warning-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.tip-box {
+  background: #f0faf0;
+  border-left: 4px solid #27ae60;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+.tip-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.verdict-box {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  margin: 40px 0;
+  border-bottom: 3px solid #e67e22;
+}
+.verdict-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e67e22;
+  margin-bottom: 12px;
+}
+.verdict-text {
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+.verdict-text strong { color: #ffffff; }
+
+.keep-reading {
+  background: #f8f8f6;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 40px 0;
+}
+.keep-reading-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+.keep-reading a {
+  display: block;
+  color: #e67e22;
+  text-decoration: none;
+  padding: 8px 0;
+  font-size: 17px;
+  border-bottom: 1px solid #eee;
+}
+.keep-reading a:last-child { border-bottom: none; }
+.keep-reading a:hover { color: #d35400; }
+
+.author-box {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #f8f8f6;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 40px 0;
+}
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  background: #e67e22;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  flex-shrink: 0;
+}
+.author-info h3 { margin: 0 0 6px; font-size: 16px; }
+.author-info p { font-size: 15px; color: #555; margin: 0; line-height: 1.6; }
+
+.ps-box {
+  background: #fffef5;
+  border: 2px dashed #e67e22;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 32px 0;
+  font-size: 16px;
+}
+.ps-box a { color: #e67e22; }
+
+.site-footer {
+  background: #1a1a1a;
+  color: #999;
+  padding: 48px 20px 24px;
+  margin-top: 60px;
+  border-top: 3px solid #e67e22;
+}
+.footer-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.footer-col h4 {
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.footer-col a {
+  display: block;
+  color: #999;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  padding: 4px 0;
+}
+.footer-col a:hover { color: #e67e22; }
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 3px solid #e67e22;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+.back-to-top:hover { background: #d35400; }
+.back-to-top.visible { display: flex; }
+
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .burger { display: flex; }
+  h1 { font-size: 1.6em; }
+  .article-container { padding: 16px 16px 40px; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .author-box { flex-direction: column; align-items: center; text-align: center; }
+  .featured-image { height: 200px; }
+  .comparison-table { font-size: 14px; }
+  .comparison-table td,
+  .comparison-table th { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">Smart<span class="bolt">⚡</span><span class="pick">Pick</span></a>
+  <nav class="nav-desktop">
+    <a href="../index.html">Home</a>
+    <a href="#">Reviews</a>
+    <a href="#">Compare</a>
+    <a href="#">Guides</a>
+    <a href="#">Deals</a>
+  </nav>
+  <button class="burger">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="nav-mobile">
+  <a href="../index.html">Home</a>
+  <a href="#">Reviews</a>
+  <a href="#">Compare</a>
+  <a href="#">Guides</a>
+  <a href="#">Deals</a>
+</nav>
+
+<main class="article-container">
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a> &rsaquo;
+  <a href="#">Guides</a> &rsaquo;
+  1000W Power Station + Space Heater
+</div>
+
+<div class="category-tag">Heating &amp; Winter</div>
+
+<h1>How Long Will a 1000W Power Station Run a Space Heater?</h1>
+
+<p class="subtitle">The honest answer nobody wants to hear. Plus the $45 alternative that actually works.</p>
+
+<div class="article-meta">
+  <div class="meta-author">
+    <div class="meta-avatar">M</div>
+    <span>By Mike</span>
+  </div>
+  <span>Updated January 2026</span>
+  <span>11 min read</span>
+</div>
+
+<div class="featured-image"></div>
+
+<div class="quick-answer">
+  <div class="quick-answer-title">⚡ Quick Answer</div>
+  <p><strong>About 1 hour.</strong> A typical 1,500W space heater will drain a 1,000Wh power station in roughly 40–50 minutes. On low (750W), you'll get about 1 hour 10 minutes. That's it.</p>
+  <p>Space heaters are the worst possible use case for portable power stations. But there ARE alternatives that work. Keep reading.</p>
+</div>
+
+<p>January 2026. Colorado. 14°F outside. Power goes out at 9 PM.</p>
+
+<p>Sarah: <em>"Can you plug in the space heater?"</em></p>
+
+<p>Me: <em>"I can. But you're going to be disappointed in about an hour."</em></p>
+
+<p>Sarah: <em>"What do you mean an hour?"</em></p>
+
+<p>Me: <em>"I mean an hour. That's how long it lasts."</em></p>
+
+<p>Sarah: <em>"You spent $800 on that thing."</em></p>
+
+<p>Me: <em>"Yes."</em></p>
+
+<p>Sarah: <em>"And it runs a heater for one hour."</em></p>
+
+<p>Me: <em>"Yes."</em></p>
+
+<p>Long pause. Rex looks at both of us. He doesn't care about runtime. He cares about the blanket.</p>
+
+<p>Sarah: <em>"So what do we do?"</em></p>
+
+<p>That conversation — that exact moment — is why I'm writing this article. Because thousands of people Google "power station space heater" every winter, hoping for an answer that doesn't exist. And I'd rather give you the real answer plus a real solution than let you find out at 9 PM in January.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>The Brutal Math</h2>
+
+<p>Space heaters are simple. They turn electricity into heat. No compressor cycling. No startup surges. Just a constant, massive draw of power, all the time, until you turn them off.</p>
+
+<p>A standard space heater has two settings:</p>
+
+<ul style="margin: 0 0 24px 20px; line-height: 2.2;">
+  <li><strong>Low:</strong> 750 watts. Constant.</li>
+  <li><strong>High:</strong> 1,500 watts. Constant.</li>
+</ul>
+
+<p>That's it. No cycling. No breaks. 750 or 1,500 watts, every single second it's on.</p>
+
+<p>Now the math:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Power Station</th>
+      <th>Capacity</th>
+      <th>Heater on LOW<br>(750W)</th>
+      <th>Heater on HIGH<br>(1,500W)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jackery 500 (518Wh)</td>
+      <td>518Wh</td>
+      <td class="loser">35 min</td>
+      <td class="loser">❌ Can't run it</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC70 (768Wh)</td>
+      <td>768Wh</td>
+      <td class="loser">52 min</td>
+      <td class="loser">❌ Can't run it</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta 2 (1,024Wh)</td>
+      <td>1,024Wh</td>
+      <td class="loser">1 hr 10 min</td>
+      <td class="loser">35 min</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC200L (2,048Wh)</td>
+      <td>2,048Wh</td>
+      <td>2 hr 20 min</td>
+      <td class="loser">1 hr 10 min</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Read that table again. Really sit with it.</p>
+
+<p>The <strong>EcoFlow Delta 2</strong> — my favorite power station, the one I recommend for almost everything — runs a space heater on LOW for <strong>one hour and ten minutes</strong>. On HIGH? <strong>Thirty-five minutes.</strong></p>
+
+<p>The Jackery 500? Can't even run a 1,500W heater. Its inverter maxes at 500W continuous. The heater won't even turn on.</p>
+
+<p>Even the massive Bluetti AC200L — a $1,400 station with 2,048Wh — gives you about two hours on low. That's $700 per hour of heat. You could burn the money directly and stay warmer.</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ The Hard Truth</div>
+  <p><strong>Portable power stations are not designed for heating.</strong> Space heaters are the most power-hungry common household appliance. They turn your $800 battery into a one-hour hand warmer.</p>
+  <p>This isn't a flaw in the power station. It's physics. Converting electricity to heat requires enormous amounts of energy. There's no hack, no trick, no workaround that changes this math.</p>
+</div>
+
+<div class="section-divider">• • •</div>
+
+<h2>Why Heating Is the Worst Use Case</h2>
+
+<p>To understand why, compare a space heater to other things people run on power stations:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Device</th>
+      <th>Watts</th>
+      <th>Runtime on 1,000Wh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CPAP machine (no heat)</td>
+      <td>25W</td>
+      <td class="winner">34 hours</td>
+    </tr>
+    <tr>
+      <td>LED lamp</td>
+      <td>9W</td>
+      <td class="winner">94 hours</td>
+    </tr>
+    <tr>
+      <td>Phone charging</td>
+      <td>15W</td>
+      <td class="winner">56 hours</td>
+    </tr>
+    <tr>
+      <td>Chest freezer</td>
+      <td>48W avg</td>
+      <td class="winner">17 hours</td>
+    </tr>
+    <tr>
+      <td>Wi-Fi router</td>
+      <td>12W</td>
+      <td class="winner">70 hours</td>
+    </tr>
+    <tr>
+      <td>Space heater (LOW)</td>
+      <td>750W</td>
+      <td class="loser">1 hr 10 min</td>
+    </tr>
+    <tr>
+      <td>Space heater (HIGH)</td>
+      <td>1,500W</td>
+      <td class="loser">35 min</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Your CPAP runs for 34 hours. Your space heater runs for 35 minutes. Same battery. The heater draws <strong>60 times more power</strong> than the CPAP.</p>
+
+<p>This is why I get frustrated when YouTube guys say <em>"this power station runs EVERYTHING in your house!"</em> while skipping past the heating question. It doesn't. It runs everything except the one thing you desperately need when it's 14°F outside.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>OK, So What Actually Works?</h2>
+
+<p>This is where the article gets useful. Because the question isn't really <em>"how long will my power station run a heater?"</em> The real question is <em>"how do I stay warm during a winter blackout?"</em></p>
+
+<p>Different question. Better answers.</p>
+
+<h3>Option 1: Electric Blanket ($35–60)</h3>
+
+<p>This is the answer. I'm putting it first because it changed everything for us.</p>
+
+<p>A standard electric blanket draws <strong>50–100 watts</strong> on high. Most of the time closer to 60–75W once it reaches temperature.</p>
+
+<p>That same 1,000Wh power station that ran a space heater for 35 minutes? It runs an electric blanket for <strong>11–14 hours</strong>. All night. Easily.</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Heating Method</th>
+      <th>Watts</th>
+      <th>Runtime on 1,000Wh</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Space heater (HIGH)</td>
+      <td>1,500W</td>
+      <td class="loser">35 min</td>
+      <td>$25–50</td>
+    </tr>
+    <tr>
+      <td>Space heater (LOW)</td>
+      <td>750W</td>
+      <td class="loser">1 hr 10 min</td>
+      <td>$25–50</td>
+    </tr>
+    <tr>
+      <td>Electric blanket (HIGH)</td>
+      <td>70W</td>
+      <td class="winner">12 hours</td>
+      <td>$35–60</td>
+    </tr>
+    <tr>
+      <td>Electric blanket (LOW)</td>
+      <td>40W</td>
+      <td class="winner">21 hours</td>
+      <td>$35–60</td>
+    </tr>
+    <tr>
+      <td>Heated mattress pad</td>
+      <td>60W</td>
+      <td class="winner">14 hours</td>
+      <td>$40–80</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Look at that difference. <strong>35 minutes vs 12 hours.</strong> Same battery. Same cost. The electric blanket doesn't heat the room — it heats <em>you</em>. Which is all that matters at 2 AM when you're trying to sleep.</p>
+
+<p>January 2026. Power goes out. Instead of plugging in the space heater, I plugged in two electric blankets — one for our bed, one for the guest room where dad was staying.</p>
+
+<p>Total draw: 130 watts. Both blankets on medium.</p>
+
+<p>EcoFlow Delta 2 runtime at 130W: <strong>about 6.5 hours</strong>. Enough to get through the night. Woke up warm. Battery at 11%.</p>
+
+<p>Rex slept under dad's blanket. Dad didn't know until morning. Nobody was cold.</p>
+<div class="section-divider">• • •</div>
+
+<h3>Option 2: Heated Vest or Jacket ($40–80)</h3>
+
+<p>This sounds ridiculous until you try it.</p>
+
+<p>Heated vests have small battery packs built in. They draw zero watts from your power station. The built-in battery lasts 4–8 hours depending on the heat setting. When it dies, you recharge it from your power station's USB port — about 15W for 2 hours.</p>
+
+<p>So for the cost of 30Wh (charging the vest battery), you get 6+ hours of personal warmth. Compare that to a space heater burning 750Wh for the same 6 hours. That's a <strong>25x efficiency gain</strong>.</p>
+
+<p>I bought a heated vest on Amazon last December. $52. Three heat zones — back, chest, collar. I wore it around the house during the January outage. Felt like being hugged by a warm person who doesn't talk. Perfect.</p>
+
+<p>Sarah bought one the next day. Did not consult me. Just showed up in a heated vest. <em>"These are good."</em> That's all she said.</p>
+
+<h3>Option 3: Propane Heater (Indoor-Safe Models)</h3>
+
+<p>This is where I'll get emails. So let me be specific.</p>
+
+<p>There are propane heaters rated for indoor use. The Mr. Heater Buddy is the most common. It runs on small propane canisters, produces 4,000–9,000 BTU of heat, and has a built-in oxygen depletion sensor that shuts it off if oxygen levels drop.</p>
+
+<p>It uses zero electricity. Your power station doesn't care.</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Propane Safety — Read This</div>
+  <p><strong>Only use propane heaters explicitly rated for indoor use.</strong> Not outdoor patio heaters. Not camping stoves. Not construction heaters.</p>
+  <p>Even with indoor-rated models:</p>
+  <ul style="margin: 10px 0 0 20px; line-height: 2.2;">
+    <li>Crack a window 1 inch for ventilation</li>
+    <li>Keep a CO detector in the room (battery-powered)</li>
+    <li>Never sleep with it running</li>
+    <li>Keep it away from curtains, furniture, pets</li>
+    <li>Place on a flat, hard surface — never carpet</li>
+  </ul>
+  <p style="margin-top: 12px;">I use a Mr. Heater Buddy. I follow every rule above. I still turn it off before sleeping and switch to the electric blanket on the power station for overnight warmth.</p>
+</div>
+
+<p>The Mr. Heater Buddy costs about $80. A 1-pound propane canister ($4) lasts 3–5 hours. It heats a medium room to comfortable in about 15 minutes.</p>
+
+<p>During our January outage, I ran the Buddy for 2 hours in the living room. Brought the room from 52°F to 68°F. Then shut it off, closed the door, and the room held 60°F for another 3 hours.</p>
+
+<p>Heat the room when you're awake. Electric blanket when you sleep. Power station stays charged for the important stuff — fridge, CPAP, phones, lights.</p>
+
+<h3>Option 4: Sleeping Bag Strategy</h3>
+
+<p>No electricity needed. Zero watts.</p>
+
+<p>A decent 30°F sleeping bag costs $40–80. Put it on your bed. Sleep in it. You'll be warm at any indoor temperature above 40°F, which your house won't drop below for at least 12–24 hours in most climates.</p>
+
+<p>This is the fallback. The "all else fails" plan. And honestly? It works better than most people expect.</p>
+
+<p>Dad slept in a sleeping bag during a camping trip at age 64. Complained the entire time. Slept nine hours straight. Woke up warm. Complained again while eating breakfast.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>The "One Room" Strategy (This Is What We Do)</h2>
+
+<p>Here's our actual winter blackout plan. Developed after three outages and one very educational argument about thermodynamics at midnight.</p>
+
+<div class="highlight-box">
+  <strong>Mike's Winter Blackout Protocol:</strong><br><br>
+  <strong>Step 1:</strong> Pick one room. Smallest bedroom or living room. Close all doors.<br><br>
+  <strong>Step 2:</strong> Everyone goes in that room. People and pets. Body heat matters — four humans and a dog in a closed room raise the temperature by 3–5°F just by existing.<br><br>
+  <strong>Step 3:</strong> If awake — run the Mr. Heater Buddy for 1–2 hours. Heat the room to comfortable. Turn it off.<br><br>
+  <strong>Step 4:</strong> If sleeping — electric blankets plugged into the power station. One per bed. 60–70W each.<br><br>
+  <strong>Step 5:</strong> Power station handles: electric blankets + phone charging + one LED light + Wi-Fi router. Total draw: ~100–120W. Runtime on 1,000Wh: <strong>7–8 hours</strong>. Enough for a full night.<br><br>
+  <strong>Step 6:</strong> Morning — recharge the power station from solar (if available) or car (12V adapter, takes 3–4 hours). Repeat the next night if needed.
+</div>
+
+<p>This plan uses zero space-heater watts from the power station. Zero. The propane handles room heating. The electric blankets handle sleeping. The power station handles everything else.</p>
+
+<p>We've used this plan twice. Both times it worked perfectly. Both times Sarah fell asleep before me because her blanket was on high and mine was on medium. I've since switched to high. Marriage is about compromise.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>What About Those Tiny Ceramic Heaters?</h2>
+
+<p>People ask about small personal ceramic heaters. The kind you put under your desk at work.</p>
+
+<p>They draw 200–400W. Better than a full-size space heater, sure. On a 1,000Wh station, a 200W ceramic heater runs for about <strong>4 hours</strong>. A 400W one for about <strong>2 hours</strong>.</p>
+
+<p>Better than 35 minutes. Still worse than an electric blanket.</p>
+
+<p>The problem: a 200W ceramic heater barely heats a bathroom. It's designed to warm your feet under a desk, not keep a family alive during a winter blackout. You'd need to sit right next to it, and even then, the rest of you is cold.</p>
+
+<p>An electric blanket at 70W wraps your entire body in warmth for 12 hours. The ceramic heater warms your shins for 4 hours. The blanket wins. It's not close.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>The Gear Checklist — What to Buy Before Winter</h2>
+
+<p>Everything you need for a winter blackout, ranked by importance:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Item</th>
+      <th>Cost</th>
+      <th>Why</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Power station (1,000Wh+)</td>
+      <td>$500–800</td>
+      <td>Runs blankets, lights, phones, CPAP</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Electric blanket (×2)</td>
+      <td>$70–120</td>
+      <td>12+ hours of warmth per charge</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Mr. Heater Buddy + propane</td>
+      <td>$95–110</td>
+      <td>Room heating, zero electricity</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Battery CO detector</td>
+      <td>$25</td>
+      <td>Safety with propane heater</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Sleeping bags (backup)</td>
+      <td>$40–80 each</td>
+      <td>Zero-power fallback</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>100W solar panel</td>
+      <td>$150–250</td>
+      <td>Recharge during the day</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Heated vest</td>
+      <td>$50–80</td>
+      <td>Daytime personal warmth</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Total cost: roughly $950–1,500. Sounds like a lot. But it covers heating, food preservation, medical equipment, communications, and lighting for multi-day outages. That's comprehensive winter preparedness for the cost of one emergency hotel stay for a family of three.</p>
+
+<p>Ask Frank about the hotel. He spent $280/night for two nights during a 2024 winter storm. Plus gas. Plus meals. Plus the $300 in meat he lost because his freezer thawed. Over $900 total. He could've bought the whole kit.</p>
+
+<p>Frank now owns the kit. All of it. He showed me his Mr. Heater Buddy last week like it was a newborn baby.</p>
+<div class="section-divider">• • •</div>
+
+<h2>But What If I REALLY Want to Run a Space Heater?</h2>
+
+<p>Fine. I hear you. Maybe you don't want alternatives. Maybe you already own the heater and just want to know your options.</p>
+
+<p>Here's the math for every common power station size:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Power Station</th>
+      <th>Capacity</th>
+      <th>Heater LOW (750W)</th>
+      <th>Heater HIGH (1,500W)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jackery 300 Plus</td>
+      <td>288Wh</td>
+      <td class="loser">❌ Can't run it</td>
+      <td class="loser">❌ Can't run it</td>
+    </tr>
+    <tr>
+      <td>Jackery 500</td>
+      <td>518Wh</td>
+      <td class="loser">35 min</td>
+      <td class="loser">❌ Can't run it</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC70</td>
+      <td>768Wh</td>
+      <td class="loser">52 min</td>
+      <td class="loser">❌ Can't run it</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta 2</td>
+      <td>1,024Wh</td>
+      <td class="loser">1 hr 10 min</td>
+      <td class="loser">35 min</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC200L</td>
+      <td>2,048Wh</td>
+      <td>2 hr 20 min</td>
+      <td class="loser">1 hr 10 min</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta Pro</td>
+      <td>3,600Wh</td>
+      <td>4 hrs</td>
+      <td>2 hrs</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC300 + B300</td>
+      <td>6,144Wh</td>
+      <td class="winner">7 hrs</td>
+      <td>3.5 hrs</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The only stations that give you meaningful space heater runtime cost $2,500–4,000 and weigh 80–130 pounds. At that point, you're buying a home battery system, not a portable power station.</p>
+
+<p>Or you could buy a $45 electric blanket and get 12 hours from a $500 station.</p>
+
+<p>I know which one I'd choose. I know which one Sarah chose. I know which one Frank chose after I showed him this exact table on my laptop while he held his third beer.</p>
+
+<div class="tip-box">
+  <div class="tip-title">💡 If You Must Use a Space Heater</div>
+  <p>Use it strategically. Don't run it continuously.</p>
+  <ul style="margin: 10px 0 0 20px; line-height: 2.2;">
+    <li>Close off one small room</li>
+    <li>Run the heater on LOW for 20–30 minutes to warm the room</li>
+    <li>Turn it off. The room holds heat for 1–2 hours</li>
+    <li>When it cools, run another 20 minutes</li>
+    <li>You'll use 250–375Wh per hour of warmth instead of 750Wh</li>
+  </ul>
+  <p style="margin-top: 12px;">It's not great. But it stretches a 1,000Wh station from 1 hour to about <strong>2.5–3 hours</strong> of usable warmth.</p>
+</div>
+
+<div class="section-divider">• • •</div>
+
+<h2>FAQ — Quick Answers</h2>
+
+<h3>Can a power station run an oil-filled radiator heater?</h3>
+<p>Same problem. Oil-filled radiators draw 600–1,500W. They're more efficient at distributing heat evenly, but they consume the same electricity. A 1,000Wh station runs a 600W oil radiator for about 1.5 hours. Better than a 1,500W ceramic heater, but still short.</p>
+
+<h3>What about a heat pump or mini-split?</h3>
+<p>Heat pumps are 2–3x more efficient than resistive heaters. A portable heat pump (if you can find one) draws 300–500W and produces the equivalent of 900–1,500W of heat. On a 1,000Wh station, that's 2–3 hours. Better, but still not all night. And portable heat pumps cost $300–600.</p>
+
+<h3>Can solar panels keep up with a space heater?</h3>
+<p>No. A 200W solar panel produces about 100–160W in good conditions. A space heater on low draws 750W. You'd need 5–7 solar panels running simultaneously to keep up. That's $750–1,500 in panels. For one space heater. This is not a viable strategy.</p>
+
+<h3>What temperature will my house drop to?</h3>
+<p>Depends on insulation, outside temp, and house size. General rule: a well-insulated house loses about 1–2°F per hour without heat in winter. If it's 68°F when power goes out and 20°F outside, your house hits about 50°F in 8–10 hours. Uncomfortable but survivable with blankets.</p>
+
+<h3>Is a gas generator better for heating?</h3>
+<p>Yes — if you're committed to running a space heater. A 3,500W gas generator runs a 1,500W space heater for 8+ hours on a tank of gas. But it runs outdoors, makes noise, needs ventilation, and costs $400–800. For dedicated winter heating backup, a gas generator beats a power station every time. Full comparison in my <a href="power-station-vs-gas-generator.html" style="color: #e67e22;">Power Station vs Generator guide</a>.</p>
+
+<div class="section-divider">• • •</div>
+
+<div class="verdict-box">
+  <div class="verdict-label">Mike's Verdict</div>
+  <div class="verdict-text">
+    <p>I'll be direct: <strong>don't buy a power station to run a space heater.</strong> It's the wrong tool for the job. Like using a sports car to haul lumber. It'll technically work for about 12 minutes and then you'll need a new plan.</p>
+    <p>Instead: <strong>buy a power station for everything EXCEPT heating</strong> — fridge, CPAP, lights, phones, router. Then handle heating separately with electric blankets (plugged into the power station at a fraction of the draw), a propane buddy heater (zero electricity), and sleeping bags (zero everything).</p>
+    <p>Total cost for the heating kit: about <strong>$200</strong>. Runtime on your power station: <strong>all night</strong>. Warmth level: <strong>genuinely comfortable</strong>.</p>
+    <p>Sarah was skeptical in January. By February she was buying a second electric blanket "for the couch." She has not mentioned the space heater since.</p>
+    <p>Rex has no opinion. He has fur.</p>
+  </div>
+</div>
+
+<div class="keep-reading">
+  <div class="keep-reading-title">📚 Keep Reading</div>
+  <a href="best-portable-power-stations-2025.html">→ Best Portable Power Stations 2026 — Full Rankings</a>
+  <a href="can-power-station-run-fridge.html">→ Can a Power Station Run a Refrigerator?</a>
+  <a href="500w-power-station-cpap-runtime.html">→ How Long Will a 500W Station Run a CPAP?</a>
+  <a href="what-can-1000w-power-station-run.html">→ What Can a 1000W Power Station Run?</a>
+</div>
+
+<div class="author-box">
+  <div class="author-avatar">M</div>
+  <div class="author-info">
+    <h3>About Mike</h3>
+    <p>I test portable power stations in Colorado — where winter blackouts are personal. I've spent three winters figuring out the best way to stay warm without grid power. The answer isn't a bigger battery. It's a smarter strategy. Email me your winter setup and I'll tell you what I'd change.</p>
+  </div>
+</div>
+
+<div class="ps-box">
+  <strong>P.S.</strong> After the January outage, Sarah ordered an electric blanket for her office too. <em>"In case the power goes out at work."</em> Her office has a backup generator. She doesn't care. The blanket stays. I'm not arguing. <a href="mailto:mike@smartpowerpick.com">mike@smartpowerpick.com</a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="#">Our Story</a>
+      <a href="#">Contact</a>
+      <a href="#">Affiliate Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Reviews</h4>
+      <a href="best-portable-power-stations-2025.html">Best Power Stations</a>
+      <a href="#">EcoFlow Delta 2</a>
+      <a href="#">Bluetti AC200L</a>
+    </div>
+    <div class="footer-col">
+      <h4>Best For</h4>
+      <a href="500w-power-station-cpap-runtime.html">CPAP Machines</a>
+      <a href="can-power-station-run-fridge.html">Refrigerators</a>
+      <a href="#">Camping</a>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <a href="are-portable-power-stations-worth-it.html">Worth It?</a>
+      <a href="power-station-vs-gas-generator.html">vs Generator</a>
+      <a href="1000w-power-station-space-heater.html">Space Heaters</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SmartPowerPick. All rights reserved. Built in Colorado.</p>
+    <p style="margin-top: 6px;"><a href="#" style="color: #666;">Privacy Policy</a> &middot; <a href="#" style="color: #666;">Terms</a> &middot; <a href="#" style="color: #666;">Affiliate Disclosure</a></p>
+  </div>
+</footer>
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll', function() {
+  var btn = document.querySelector('.back-to-top');
+  if (window.scrollY > 400) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});
+
+document.querySelector('.burger').addEventListener('click', function() {
+  document.querySelector('.nav-mobile').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

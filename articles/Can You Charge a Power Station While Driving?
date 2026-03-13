@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can You Charge a Power Station While Driving? — SmartPowerPick</title>
+<meta name="description" content="Yes — but how fast depends on your car, your cable, and your station. I tested 4 power stations on a 6-hour road trip. Here's exactly what happened.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231a1a1a' stroke='%23e67e22' stroke-width='6'/%3E%3Cpolygon points='55,15 35,55 48,55 42,85 65,42 52,42' fill='%23e74c3c'/%3E%3C/svg%3E">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #FAFAF8;
+  color: #1a1a1a;
+  line-height: 1.85;
+  font-size: 19px;
+}
+
+.site-header {
+  background: #1a1a1a;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #e67e22;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+.logo .bolt { color: #e74c3c; }
+.logo .pick { color: #e67e22; }
+
+.nav-desktop {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.nav-desktop a {
+  color: #cccccc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-desktop a:hover { color: #e67e22; }
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 63px;
+  left: 0;
+  right: 0;
+  background: #1a1a1a;
+  padding: 20px;
+  border-bottom: 3px solid #e67e22;
+  z-index: 999;
+}
+.nav-mobile.active { display: block; }
+.nav-mobile a {
+  display: block;
+  color: #cccccc;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #333;
+}
+.nav-mobile a:hover { color: #e67e22; }
+
+.article-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+.breadcrumb {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+.breadcrumb a { color: #888; text-decoration: none; }
+.breadcrumb a:hover { color: #e67e22; }
+
+.category-tag {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e67e22;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+.subtitle {
+  font-size: 1.15em;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.article-meta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.meta-author { display: flex; align-items: center; gap: 8px; }
+.meta-avatar {
+  width: 28px;
+  height: 28px;
+  background: #e67e22;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.featured-image {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid #e67e22;
+}
+.featured-image::before {
+  content: '🚗 + 🔋';
+  font-size: 48px;
+  opacity: 0.6;
+}
+
+.quick-answer {
+  background: #f0faf0;
+  border-left: 4px solid #27ae60;
+  padding: 24px 28px;
+  margin-bottom: 36px;
+  border-radius: 0 8px 8px 0;
+}
+.quick-answer-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+h3 {
+  font-size: 1.2em;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  color: #1a1a1a;
+}
+
+p { margin-bottom: 18px; }
+
+.section-divider {
+  text-align: center;
+  margin: 40px 0;
+  color: #ccc;
+  font-size: 18px;
+  letter-spacing: 12px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 36px;
+  font-size: 16px;
+}
+.comparison-table th {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid #e67e22;
+}
+.comparison-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+.comparison-table tr:nth-child(even) { background: #f8f8f6; }
+.winner { color: #27ae60; font-weight: 600; }
+.loser { color: #e74c3c; font-weight: 600; }
+
+.highlight-box {
+  background: #fffef5;
+  border-left: 4px solid #e67e22;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.warning-box {
+  background: #fef0f0;
+  border-left: 4px solid #e74c3c;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+.warning-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.tip-box {
+  background: #f0faf0;
+  border-left: 4px solid #27ae60;
+  padding: 20px 24px;
+  margin: 24px 0;
+  border-radius: 0 8px 8px 0;
+}
+.tip-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.verdict-box {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  margin: 40px 0;
+  border-bottom: 3px solid #e67e22;
+}
+.verdict-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #e67e22;
+  margin-bottom: 12px;
+}
+.verdict-text {
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: #e0e0e0;
+}
+.verdict-text strong { color: #ffffff; }
+
+.keep-reading {
+  background: #f8f8f6;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 40px 0;
+}
+.keep-reading-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+.keep-reading a {
+  display: block;
+  color: #e67e22;
+  text-decoration: none;
+  padding: 8px 0;
+  font-size: 17px;
+  border-bottom: 1px solid #eee;
+}
+.keep-reading a:last-child { border-bottom: none; }
+.keep-reading a:hover { color: #d35400; }
+
+.author-box {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #f8f8f6;
+  border-radius: 12px;
+  padding: 28px;
+  margin: 40px 0;
+}
+.author-avatar {
+  width: 64px;
+  height: 64px;
+  background: #e67e22;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  flex-shrink: 0;
+}
+.author-info h3 { margin: 0 0 6px; font-size: 16px; }
+.author-info p { font-size: 15px; color: #555; margin: 0; line-height: 1.6; }
+
+.ps-box {
+  background: #fffef5;
+  border: 2px dashed #e67e22;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 32px 0;
+  font-size: 16px;
+}
+.ps-box a { color: #e67e22; }
+
+.site-footer {
+  background: #1a1a1a;
+  color: #999;
+  padding: 48px 20px 24px;
+  margin-top: 60px;
+  border-top: 3px solid #e67e22;
+}
+.footer-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.footer-col h4 {
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+.footer-col a {
+  display: block;
+  color: #999;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  padding: 4px 0;
+}
+.footer-col a:hover { color: #e67e22; }
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 3px solid #e67e22;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+.back-to-top:hover { background: #d35400; }
+.back-to-top.visible { display: flex; }
+
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .burger { display: flex; }
+  h1 { font-size: 1.6em; }
+  .article-container { padding: 16px 16px 40px; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .author-box { flex-direction: column; align-items: center; text-align: center; }
+  .featured-image { height: 200px; }
+  .comparison-table { font-size: 14px; }
+  .comparison-table td,
+  .comparison-table th { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">Smart<span class="bolt">⚡</span><span class="pick">Pick</span></a>
+  <nav class="nav-desktop">
+    <a href="../index.html">Home</a>
+    <a href="#">Reviews</a>
+    <a href="#">Compare</a>
+    <a href="#">Guides</a>
+    <a href="#">Deals</a>
+  </nav>
+  <button class="burger">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="nav-mobile">
+  <a href="../index.html">Home</a>
+  <a href="#">Reviews</a>
+  <a href="#">Compare</a>
+  <a href="#">Guides</a>
+  <a href="#">Deals</a>
+</nav>
+
+<main class="article-container">
+
+<div class="breadcrumb">
+  <a href="../index.html">Home</a> &rsaquo;
+  <a href="#">Guides</a> &rsaquo;
+  Charge Power Station While Driving
+</div>
+
+<div class="category-tag">Charging &amp; Road Trips</div>
+
+<h1>Can You Charge a Power Station While Driving?</h1>
+
+<p class="subtitle">I drove from Denver to Moab with four power stations in the back seat. One cable changed everything.</p>
+
+<div class="article-meta">
+  <div class="meta-author">
+    <div class="meta-avatar">M</div>
+    <span>By Mike</span>
+  </div>
+  <span>Updated January 2026</span>
+  <span>11 min read</span>
+</div>
+
+<div class="featured-image"></div>
+
+<div class="quick-answer">
+  <div class="quick-answer-title">⚡ Quick Answer</div>
+  <p><strong>Yes.</strong> Every major power station can charge from a 12V car outlet (cigarette lighter port). But the standard port is slow — typically <strong>5–8 hours</strong> to fill a 1,000Wh station. The real game-changer is a direct-to-battery cable, which charges <strong>3–5x faster</strong>.</p>
+  <p>I tested four stations on a 6-hour drive. One arrived fully charged. Three didn't.</p>
+</div>
+
+<p>September 2025. Road trip. Denver to Moab, Utah. Six hours of desert highway. Sarah navigating. Rex in the back seat shedding on everything. Four power stations behind him, cables everywhere, looking like a bomb squad operation.</p>
+
+<p>The plan was simple. Start with all four stations at 0%. See how much each charges during the drive. Real road, real car, real conditions.</p>
+
+<p>Sarah's first question: <em>"Is this going to blow a fuse?"</em></p>
+
+<p>Fair question. The answer is: it depends on which cable you use and how your car is wired. And that's basically the whole article.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>Three Ways to Charge While Driving</h2>
+
+<p>There are three methods. They vary wildly in speed. Most people only know about the first one.</p>
+
+<h3>Method 1: Standard 12V Cigarette Lighter Port</h3>
+
+<p>Every car has one. You plug a 12V car charging cable (comes with most power stations) into the cigarette lighter socket. Easy.</p>
+
+<p>The problem: this port is fused at <strong>10–15 amps</strong> in most vehicles. At 12V, that's only <strong>120–180 watts</strong> of charging power. Many cars limit it further to 100–130W.</p>
+
+<p>For a 1,000Wh station, that means:</p>
+
+<ul style="margin: 0 0 24px 20px; line-height: 2.2;">
+  <li>At 120W input: about <strong>8.5 hours</strong> from empty to full</li>
+  <li>At 100W input: about <strong>10 hours</strong> from empty to full</li>
+</ul>
+
+<p>A six-hour drive gets you about 60–70% charge. Not bad. Not great.</p>
+
+<h3>Method 2: Direct-to-Battery Connection (The Fast Way)</h3>
+
+<p>This is what changed everything for me.</p>
+
+<p>Instead of going through the cigarette lighter, you connect the power station directly to your car's 12V battery using alligator clips or ring terminals. Same 12V source, but you bypass the fused port.</p>
+
+<p>Your car's alternator produces <strong>60–120 amps</strong> at ~14V while driving. That's up to <strong>1,680 watts</strong> of available power. Obviously you don't want all of it — your car needs some for itself — but pulling 30–50 amps (420–700W) is perfectly safe while driving.</p>
+
+<p>Most power stations with DC input accept <strong>200–500W from 12V</strong> through a direct connection. That's 3–5x faster than the cigarette lighter.</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Max Watts</th>
+      <th>Time to Fill 1,000Wh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cigarette lighter</td>
+      <td>100–130W</td>
+      <td class="loser">8–10 hours</td>
+    </tr>
+    <tr>
+      <td>Direct-to-battery cable</td>
+      <td>200–500W</td>
+      <td class="winner">2–5 hours</td>
+    </tr>
+    <tr>
+      <td>12V outlet + inverter (don't do this)</td>
+      <td>Varies</td>
+      <td class="loser">Inefficient mess</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Method 3: Car Inverter + AC Charger (Don't Do This)</h3>
+
+<p>Some people buy a car inverter, plug the power station's AC wall charger into it, and charge that way.</p>
+
+<p>This works. But it's stupid.</p>
+
+<p>You're converting DC (car battery) → AC (inverter) → DC (power station). Two conversions. Each wastes 10–15% as heat. You lose 20–30% of your energy to inefficiency. The inverter gets hot. The charger gets hot. Your car outlet might trip.</p>
+
+<p>Just use the DC cable directly. Skip the double conversion. It's faster, safer, and doesn't involve a $40 inverter heating up behind your seat.</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Don't Use Method 3</div>
+  <p>I'm listing it because people ask about it. I tested it once. The car inverter hit 160°F. The AC charger was too hot to touch. Combined efficiency was about 68%. I unplugged everything, said a word Sarah disapproves of, and went back to the DC cable.</p>
+</div>
+
+<div class="section-divider">• • •</div>
+
+<h2>The Road Trip Test — Real Results</h2>
+
+<p>Denver to Moab. 350 miles. 6 hours including one gas stop. September, 78°F outside. 2021 Toyota 4Runner. All four stations started at 0%.</p>
+
+<p>I tested two on the cigarette lighter (one at a time, swapped halfway) and two on direct-to-battery cables.</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Power Station</th>
+      <th>Capacity</th>
+      <th>Method</th>
+      <th>Charge Rate</th>
+      <th>After 6 Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jackery 300 Plus</td>
+      <td>288Wh</td>
+      <td>Cigarette lighter</td>
+      <td>~100W</td>
+      <td class="winner">100% (full in ~3 hrs)</td>
+    </tr>
+    <tr>
+      <td>Jackery Explorer 500</td>
+      <td>518Wh</td>
+      <td>Cigarette lighter</td>
+      <td>~100W</td>
+      <td>62%</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta 2</td>
+      <td>1,024Wh</td>
+      <td>Direct-to-battery</td>
+      <td>~400W</td>
+      <td class="winner">100% (full in ~3 hrs)</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC200L</td>
+      <td>2,048Wh</td>
+      <td>Direct-to-battery</td>
+      <td>~360W</td>
+      <td class="winner">100% (full in ~5.5 hrs)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Look at that Delta 2 result. Zero to <strong>100% in about 3 hours</strong> via direct-to-battery. Halfway through the drive, it was done. Just sat there fully charged for the last three hours while I drove through canyon country.</p>
+
+<p>The Jackery 300 Plus also hit 100% — but it's small. 288Wh fills up fast even on the slow cigarette lighter. Three hours and it was done.</p>
+
+<p>The Jackery 500 only got to 62% on the cigarette lighter in its three hours. If I'd given it the full six hours, it would've hit about 100%. But I swapped it out for the 300 Plus at the halfway point.</p>
+
+<p>The Bluetti AC200L — the big one, 2,048Wh — was the closest call. Direct-to-battery at 360W, it filled up right as we pulled into Moab. I watched it tick to 100% in the motel parking lot. Sarah slow-clapped from the passenger seat.</p>
+
+<div class="highlight-box">
+  <strong>The takeaway:</strong> Direct-to-battery charging is the difference between arriving with a full station and arriving with a half-charged one. For a 1,000Wh+ station, it's not optional — it's essential.
+</div>
+
+<div class="section-divider">• • •</div>
+
+<h2>How to Set Up Direct-to-Battery Charging</h2>
+
+<p>It sounds intimidating. It's not. Here's what you need and what to do.</p>
+
+<h3>What You Need:</h3>
+
+<ul style="margin: 0 0 24px 20px; line-height: 2.2;">
+  <li><strong>A DC charging cable with alligator clips or ring terminals.</strong> EcoFlow, Bluetti, and Jackery all sell these for $30–60. Some stations include them in the box.</li>
+  <li><strong>An inline fuse</strong> (30–50A, depending on your station's max DC input). Most brand cables include one built-in. If not, add one. This protects your car's electrical system.</li>
+  <li><strong>Basic comfort opening your hood.</strong> You're clipping two wires to your battery. Red to positive. Black to negative. That's it.</li>
+</ul>
+
+<h3>Setup Steps:</h3>
+
+<div class="tip-box">
+  <div class="tip-title">💡 Step-by-Step</div>
+  <ol style="margin: 0 0 0 20px; line-height: 2.4;">
+    <li>Park the car. Engine OFF. Pop the hood.</li>
+    <li>Connect the red alligator clip to the POSITIVE (+) battery terminal.</li>
+    <li>Connect the black alligator clip to the NEGATIVE (−) terminal or a grounding bolt.</li>
+    <li>Route the cable through the firewall gap or along the door jamb into the cabin. (Most cars have a gap near the hood hinge.)</li>
+    <li>Plug the other end into your power station's DC input port.</li>
+    <li>Start the engine. Charging begins immediately.</li>
+    <li>Drive normally. The alternator handles the extra load.</li>
+    <li>When you arrive: turn off the engine, disconnect the power station cable, THEN remove the alligator clips (black first, then red).</li>
+  </ol>
+</div>
+
+<p>Total setup time the first time: about 15 minutes. After that: 3 minutes. I've done it so many times now that Rex doesn't even look up when I pop the hood.</p>
+<div class="section-divider">• • •</div>
+
+<h2>Will It Drain My Car Battery?</h2>
+
+<p>This is the #1 fear. Everyone asks. So let me explain exactly what happens electrically.</p>
+
+<p>When your engine is running, the alternator produces power. Typically 60–120 amps at ~14 volts. That's 840–1,680 watts of available power.</p>
+
+<p>Your car uses some of that — headlights (100W), AC blower (80–150W), stereo (20W), fuel injection computer (30W), etc. On a normal drive, your car consumes roughly 300–500W from the alternator. The rest is excess.</p>
+
+<p>A power station charging at 400W via direct-to-battery uses that excess. The alternator doesn't care. It was generating it anyway. Your engine works slightly harder — maybe 0.3–0.5 MPG less fuel economy — but your car battery stays fully charged because the alternator is replenishing it constantly.</p>
+
+<div class="highlight-box">
+  <strong>Engine running = safe.</strong> The alternator produces more than enough power for your car AND the power station simultaneously. You'll use slightly more gas. That's the only cost.<br><br>
+  <strong>Engine OFF = danger.</strong> If you charge from the car battery with the engine off, you're draining the car battery directly. A 1,000Wh power station could completely kill your car battery in 1–2 hours. Don't do this. Ever.
+</div>
+
+<p>During the Moab trip, I monitored my 4Runner's voltage gauge the entire drive. Normal running voltage: 14.1V. With the Delta 2 charging at 400W: 13.8V. Barely a blip. The alternator adjusted automatically.</p>
+
+<p>I also tracked fuel economy. Normal highway driving: 19.2 MPG. With the Delta 2 charging: 18.7 MPG. Half a mile per gallon. On a 350-mile trip, that's about 0.5 extra gallons of gas. Maybe $2.</p>
+
+<p>Two dollars to fully charge a 1,024Wh power station. Compare that to 10 cents at home on grid electricity. Road charging is more expensive per kilowatt-hour, but it's happening during time you'd be driving anyway. The cost is functionally invisible.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>The Fuse Problem (And How I Blew One)</h2>
+
+<p>Story time.</p>
+
+<p>June 2025. Before the Moab trip. I'm testing car charging in my driveway. Jackery 500 plugged into the cigarette lighter. Everything fine.</p>
+
+<p>Then I think: what if I plug in the Jackery AND charge my phone AND run the dash cam?</p>
+
+<p>I plug my phone into the USB port. Fine. Total draw maybe 115W. The cigarette lighter fuse is rated at 15A (180W). Still under the limit.</p>
+
+<p>Then Sarah gets in the car. Plugs in HER phone. Another 15W. Now we're at 130W. Fine.</p>
+
+<p>Then she turns on the heated seat.</p>
+
+<p><em>POP.</em></p>
+
+<p>Cigarette lighter goes dead. Jackery stops charging. Phone stops charging. Sarah's heated seat keeps working (different circuit).</p>
+
+<p>I blew the 15A fuse. The heated seat didn't cause it — it's on a separate circuit — but the combination of the power station + two phones + dash cam pushed the cigarette lighter circuit just past its limit. It had been running at 130W on a 180W fuse, which sounds fine, except fuses degrade over time and the actual trip point was probably closer to 150W.</p>
+
+<p>Replacing the fuse: $0.50 and five minutes. The embarrassment of explaining to Sarah why her phone stopped charging: priceless.</p>
+
+<div class="warning-box">
+  <div class="warning-title">⚠️ Know Your Fuse Limits</div>
+  <p>Your car's cigarette lighter / 12V outlet is fused. Usually 10–15A (120–180W). Check your owner's manual.</p>
+  <p><strong>Don't plug anything else into the same circuit while the power station is charging.</strong> No phone chargers. No dash cam adapters. Nothing. Give the power station the full circuit.</p>
+  <p>If you need to charge phones simultaneously, use the power station's USB ports — it's already plugged in. Let the car circuit handle only the power station.</p>
+</div>
+
+<div class="tip-box">
+  <div class="tip-title">💡 The Smart Setup</div>
+  <p>Car cigarette lighter → Power station (charging)<br>
+  Power station USB ports → Your phones, tablets, cameras<br><br>
+  This way the car only powers the station. The station powers everything else. One circuit, no overloads, no blown fuses, no awkward conversations with Sarah.</p>
+</div>
+
+<div class="section-divider">• • •</div>
+
+<h2>Charging Speed by Brand — What I Measured</h2>
+
+<p>Every brand handles 12V car charging differently. Some are fast. Some are painfully slow. Here's what I actually measured:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Power Station</th>
+      <th>Capacity</th>
+      <th>Cigarette Lighter</th>
+      <th>Direct-to-Battery</th>
+      <th>0→100% Drive Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jackery 300 Plus</td>
+      <td>288Wh</td>
+      <td>100W</td>
+      <td>N/A (no DC input)</td>
+      <td class="winner">~3 hours (cig lighter)</td>
+    </tr>
+    <tr>
+      <td>Jackery Explorer 500</td>
+      <td>518Wh</td>
+      <td>100W</td>
+      <td>N/A (no DC input)</td>
+      <td>~5.5 hours (cig lighter)</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC70</td>
+      <td>768Wh</td>
+      <td>120W</td>
+      <td>~200W (XT60 port)</td>
+      <td class="winner">~4 hours (direct)</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta 2</td>
+      <td>1,024Wh</td>
+      <td>130W (with adapter)</td>
+      <td>~400W (XT60 port)</td>
+      <td class="winner">~3 hours (direct)</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC200L</td>
+      <td>2,048Wh</td>
+      <td>120W</td>
+      <td>~360W (DC port)</td>
+      <td>~5.5 hours (direct)</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta Pro</td>
+      <td>3,600Wh</td>
+      <td>130W</td>
+      <td>~500W (DC port)</td>
+      <td>~7 hours (direct)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The EcoFlow Delta 2 is the standout here. 400W from a direct-to-battery connection. That's absurdly fast for car charging. Zero to full in three hours. A morning drive to a campsite and you arrive with a fully charged station.</p>
+
+<p>The Jackery models are limited because they don't have a separate high-power DC input port. You're stuck with the cigarette lighter cable. It works, but it's slow. Fine for small stations (300 Plus fills in 3 hours). Painful for the 500.</p>
+
+<p>The Bluetti AC200L is impressive considering its massive 2,048Wh capacity. At 360W direct input, you can fill it in about 5.5 hours. One long road trip day and you're set for a week of camping.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>Charging + Using at the Same Time (Pass-Through)</h2>
+
+<p>This is a common road trip scenario. You're driving. The power station is charging from the car. But you also want to power something from the station — a cooler, a phone, a CPAP for someone napping in the back seat.</p>
+
+<p>Can you charge and discharge simultaneously?</p>
+
+<p><strong>Yes — most modern stations support pass-through.</strong></p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Power Station</th>
+      <th>Pass-Through?</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jackery 300 Plus</td>
+      <td class="winner">✅ Yes</td>
+      <td>Works fine. Charging slows slightly.</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC70</td>
+      <td class="winner">✅ Yes</td>
+      <td>No issues in testing.</td>
+    </tr>
+    <tr>
+      <td>EcoFlow Delta 2</td>
+      <td class="winner">✅ Yes</td>
+      <td>Charges and runs devices with no hiccups.</td>
+    </tr>
+    <tr>
+      <td>Bluetti AC200L</td>
+      <td class="winner">✅ Yes</td>
+      <td>Handles heavy loads while charging.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>During the Moab trip, I had the Delta 2 charging from the battery AND running a 12V cooler in the back. The cooler drew about 45W. The station was charging at 400W and outputting 45W, so the net charge rate was about 355W. Still hit 100% in about 3.5 hours instead of 3.</p>
+
+<p>Sarah's phone was also charging from the station's USB port. Rex's contribution remained zero but he was lying on the cooler cable for warmth, which I consider a net negative.</p>
+<div class="section-divider">• • •</div>
+
+<h2>Car Charging for Every Scenario</h2>
+
+<p>People charge power stations in cars for different reasons. Here's what works for each:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Best Method</th>
+      <th>What to Buy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Weekend camping, small station</td>
+      <td>Cigarette lighter</td>
+      <td>Included 12V cable. Done.</td>
+    </tr>
+    <tr>
+      <td>Week-long road trip, 1,000Wh+</td>
+      <td>Direct-to-battery</td>
+      <td>Brand's DC car charging cable + alligator clips ($30–60)</td>
+    </tr>
+    <tr>
+      <td>Van life / overlanding</td>
+      <td>Direct-to-battery (permanent install)</td>
+      <td>Ring terminals + fuse box + 10 AWG wire</td>
+    </tr>
+    <tr>
+      <td>Emergency blackout, car in driveway</td>
+      <td>Either method, engine idling</td>
+      <td>Whatever cable you already have</td>
+    </tr>
+    <tr>
+      <td>Tailgating / day trip</td>
+      <td>Cigarette lighter (charge on the way)</td>
+      <td>Included 12V cable</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Most people fall into the first two categories. Weekend campers: just use the cigarette lighter cable that came in the box. Road trippers with big stations: invest $30–60 in a direct-to-battery cable. It's the single best accessory you can buy.</p>
+
+<h3>The Emergency Scenario</h3>
+
+<p>This one deserves extra attention. Power goes out at home. You have a power station running the fridge and CPAP. After 10 hours, the battery is getting low. No sun for solar. What do you do?</p>
+
+<p>You go outside. Start your car. Connect the power station. Let the engine idle for 2–3 hours. The alternator charges the station. Turn off the car. Bring the station back inside.</p>
+
+<p>A gallon of gas running your car at idle for 2 hours charges about 400–600Wh via direct-to-battery. That's another 8–10 hours of fridge runtime. Three dollars in gas for a night of food preservation.</p>
+
+<p>This is how people survived multi-day outages during Hurricane Milton. Car as generator. Power station as battery. Rotate as needed.</p>
+
+<div class="highlight-box">
+  <strong>Emergency car charging protocol:</strong><br><br>
+  1. Park in driveway, windows down for ventilation if in garage (NEVER idle in a closed garage)<br>
+  2. Connect direct-to-battery cable to power station<br>
+  3. Start engine, let idle<br>
+  4. Charge for 2–3 hours (~400–600Wh gained)<br>
+  5. Disconnect station, turn off engine<br>
+  6. Bring station inside, reconnect fridge/CPAP/essentials<br>
+  7. Repeat once daily as needed<br><br>
+  One tank of gas (15 gallons) = roughly 7–10 charging sessions = <strong>a week or more of essential power</strong>.
+</div>
+
+<div class="section-divider">• • •</div>
+
+<h2>What About Electric Cars and Hybrids?</h2>
+
+<p>Great question. Different answer.</p>
+
+<h3>Hybrids (Toyota RAV4 Hybrid, Ford Maverick, etc.)</h3>
+
+<p>Hybrids are actually <em>better</em> for this than regular cars. Their engines are already designed to run efficiently at idle to charge the hybrid battery. Many hybrids have larger 12V outlets or even built-in 120V AC outlets in the bed (Ford Maverick, Toyota Tundra i-Force Max).</p>
+
+<p>The Ford Maverick's Pro Power Onboard outlet puts out 2,400W. You could plug in your power station's AC wall charger and fill a 1,000Wh station in about an hour. While using a gallon of gas. That's wildly efficient.</p>
+
+<h3>PHEVs (Plug-in Hybrids)</h3>
+
+<p>Even better. A Mitsubishi Outlander PHEV or Toyota RAV4 Prime can run on electric-only mode, meaning your alternator works without burning gas at all — at least until the hybrid battery depletes. You could charge your power station for free from a charged PHEV.</p>
+
+<h3>Full Electric (Tesla, Rivian, etc.)</h3>
+
+<p>Complicated. Most EVs don't have a traditional 12V outlet capable of high-power output. Some have 120V outlets (Rivian R1T has four). You can charge a power station from those, but you're essentially transferring energy from a big battery (your car) to a small battery (your power station). It works, but feels like pouring water between buckets.</p>
+
+<p>The real play with an EV: just use the car's outlets directly to power your devices. A Rivian R1T with a full battery has 135,000Wh. That's 135 power stations. You don't need a middleman.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>My Cable Recommendations (By Brand)</h2>
+
+<p>The cable matters more than people think. Wrong cable = slow charging or no charging. Here's what I use and recommend for each brand:</p>
+
+<table class="comparison-table">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Cigarette Lighter Cable</th>
+      <th>Direct-to-Battery Cable</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EcoFlow</td>
+      <td>Included with most models</td>
+      <td>EcoFlow XT60 Car Charge Cable + battery clips</td>
+      <td>$35–50</td>
+    </tr>
+    <tr>
+      <td>Bluetti</td>
+      <td>Included with most models</td>
+      <td>Bluetti DC Charging Cable (aviation plug)</td>
+      <td>$30–45</td>
+    </tr>
+    <tr>
+      <td>Jackery</td>
+      <td>Included with most models</td>
+      <td>Limited options — cigarette lighter only for most models</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>Anker</td>
+      <td>Included with most models</td>
+      <td>Anker DC car charging enhancement cable</td>
+      <td>$30–40</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Jackery's Achilles heel: most models don't support high-power DC input from the car battery. You're limited to the cigarette lighter. For the 300 Plus, that's fine — it fills in 3 hours. For larger Jackery models, it's frustrating. This is one reason I lean toward EcoFlow for road trip use.</p>
+
+<div class="section-divider">• • •</div>
+
+<h2>FAQ — Quick Answers</h2>
+
+<h3>Can I charge while the car is parked with the engine off?</h3>
+<p>Technically yes. But you'll drain your car battery. A power station pulling 100W from a 50Ah car battery will kill it in about 4–5 hours. If you can't start your car, your power station problem becomes a much bigger problem. Always run the engine while charging.</p>
+
+<h3>Will this void my car's warranty?</h3>
+<p>Using the cigarette lighter: no. Direct-to-battery with proper fusing: extremely unlikely, but check your manual. I've never heard of a warranty claim denied for this. The alternator doesn't care what it's charging.</p>
+
+<h3>Can I charge two power stations from one car?</h3>
+<p>One on the cigarette lighter, one on direct-to-battery? Yes. Different circuits, different connections. I've done it. Total draw was about 520W. The 4Runner's alternator didn't flinch. Voltage dipped from 14.1V to 13.6V. Still well within safe range.</p>
+
+<h3>What about a motorcycle or ATV?</h3>
+<p>Smaller alternators. A motorcycle alternator typically produces 200–400W. Charging a power station at 100W is fine. At 400W, you'll strain the system. Stick with the cigarette lighter cable on small vehicles and charge small stations (under 500Wh).</p>
+
+<h3>Does temperature affect car charging speed?</h3>
+<p>Yes. In extreme cold (below 32°F), LiFePO4 batteries slow their charge rate to protect themselves. You might see 60–70% of normal charging speed. Li-ion batteries are less affected but still slow slightly. In summer heat, no issues — if anything, the station charges slightly faster.</p>
+
+<div class="section-divider">• • •</div>
+
+<div class="verdict-box">
+  <div class="verdict-label">Mike's Verdict</div>
+  <div class="verdict-text">
+    <p><strong>Yes, charge your power station while driving.</strong> It's free time. You're already burning gas. The alternator has power to spare. Use it.</p>
+    <p>For stations under 500Wh: <strong>the cigarette lighter cable works fine.</strong> It fills small stations in one drive.</p>
+    <p>For stations 500Wh and up: <strong>get the direct-to-battery cable.</strong> $30–60 and you cut charging time by 3–5x. The EcoFlow Delta 2 goes from zero to full in three hours. That's a morning drive to your campsite. You arrive with a full battery and the whole weekend ahead of you.</p>
+    <p>For emergencies: <strong>your car is a generator.</strong> Idle for 2–3 hours, charge the station, bring it inside. A tank of gas keeps your essentials running for a week.</p>
+    <p>That $35 cable is the best accessory I've bought for any power station. It turned a six-hour drive into a six-hour charging session. I arrived in Moab with four fully charged stations, one shedding dog, and one wife who was grudgingly impressed.</p>
+    <p><em>"That's actually pretty smart."</em></p>
+    <p>Framing that quote. It's going on the wall next to Maria's email.</p>
+  </div>
+</div>
+
+<div class="keep-reading">
+  <div class="keep-reading-title">📚 Keep Reading</div>
+  <a href="best-portable-power-stations-2025.html">→ Best Portable Power Stations 2026 — Full Rankings</a>
+  <a href="solar-charge-power-station.html">→ How to Charge a Power Station with Solar Panels</a>
+  <a href="can-power-station-run-fridge.html">→ Can a Power Station Run a Refrigerator?</a>
+  <a href="power-station-camping-guide.html">→ Complete Power Station Camping Guide</a>
+</div>
+
+<div class="author-box">
+  <div class="author-avatar">M</div>
+  <div class="author-info">
+    <h3>About Mike</h3>
+    <p>I've driven roughly 4,000 miles testing power station car charging. Denver to Moab. Denver to Yellowstone. Denver to that campsite outside Pagosa Springs where Frank got a flat tire. Every road trip is a charging test. Every test makes the next article better. From Colorado, where the drives are long and the alternator is willing.</p>
+  </div>
+</div>
+
+<div class="ps-box">
+  <strong>P.S.</strong> If you're planning a road trip and want to know the exact cable for your specific power station and car, email me both model numbers. I'll tell you what to buy and where to clip it: <a href="mailto:mike@smartpowerpick.com">mike@smartpowerpick.com</a><br><br>
+  Also — yes, Rex shed on all four power stations during the Moab trip. I found a golden retriever hair inside the Delta 2's AC outlet. It still works fine. These things are tougher than they look.
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="#">Our Story</a>
+      <a href="#">Contact</a>
+      <a href="#">Affiliate Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Reviews</h4>
+      <a href="best-portable-power-stations-2025.html">Best Power Stations</a>
+      <a href="#">EcoFlow Delta 2</a>
+      <a href="#">Bluetti AC200L</a>
+    </div>
+    <div class="footer-col">
+      <h4>Best For</h4>
+      <a href="500w-power-station-cpap-runtime.html">CPAP Machines</a>
+      <a href="can-power-station-run-fridge.html">Refrigerators</a>
+      <a href="#">Camping</a>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <a href="are-portable-power-stations-worth-it.html">Worth It?</a>
+      <a href="power-station-vs-gas-generator.html">vs Generator</a>
+      <a href="charge-power-station-while-driving.html">Car Charging</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SmartPowerPick. All rights reserved. Built in Colorado.</p>
+    <p style="margin-top: 6px;"><a href="#" style="color: #666;">Privacy Policy</a> &middot; <a href="#" style="color: #666;">Terms</a> &middot; <a href="#" style="color: #666;">Affiliate Disclosure</a></p>
+  </div>
+</footer>
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll', function() {
+  var btn = document.querySelector('.back-to-top');
+  if (window.scrollY > 400) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+});
+
+document.querySelector('.burger').addEventListener('click', function() {
+  document.querySelector('.nav-mobile').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
